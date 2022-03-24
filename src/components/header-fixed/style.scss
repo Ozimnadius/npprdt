@@ -1,0 +1,31 @@
+.header-fixed{
+  position: fixed;
+  z-index: 100;
+  top: -100%;
+  left: 0;
+  right: 0;
+  padding: 12px 0;
+
+  background: #5c64a4;
+
+  @include tr;
+
+  &.active{
+    top: 0;
+  }
+
+  &__container{
+    align-items: center;
+  }
+
+  &__center{
+    display: flex;
+    gap: 200px;
+  }
+
+  &__item{
+
+    @extend %contact;
+    margin: 0;
+  }
+}

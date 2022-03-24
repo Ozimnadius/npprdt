@@ -1,0 +1,51 @@
+
+.menu-btn{
+  position: fixed;
+  z-index: 101;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 155px;
+  height: 583px;
+  background: url("/images/content/menu.png") 0 0 no-repeat;
+  background-size: cover;
+  padding-left: 20px;
+
+  display: flex;
+  align-items: center;
+
+  &__wrap{
+    position: relative;
+  }
+
+  &__btn{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    color: $bg;
+    @include tr;
+
+    &:hover{
+      color: $main;
+    }
+
+    &-line{
+      width: 43px;
+      height: 4px;
+      background: currentColor;
+    }
+  }
+
+  &__title{
+    position: absolute;
+    top: calc(100% + 35px);
+    left: 50%;
+    writing-mode: vertical-lr;
+    color: $bg;
+    font-size: 14px;
+    text-transform: uppercase;
+    transform: rotate(-180deg) translateX(50%);
+  }
+
+
+}

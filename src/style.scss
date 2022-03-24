@@ -1,0 +1,26 @@
+//USER
+@import "default/css/variables";
+@import "default/css/mixins";
+@import "default/css/fonts";
+@import "default/css/smart-grid";
+@import "default/css/adjustment";
+@import "default/css/common";
+
+//COMPONENTS
+@import "components/header/style";
+@import "components/footer/style";
+@import "components/logo/style";
+@import "components/slider/style";
+@import "components/header-fixed/style";
+@import "components/menu/style";
+
+//PAGES
+@import "pages/style";
+
+
+.debug {
+  @include debug(rgba(0,0,0,0.3), 1px solid red);
+  z-index: 100;
+  top: 0;
+  display: none;
+}

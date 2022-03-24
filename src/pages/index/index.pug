@@ -1,0 +1,25 @@
+extends ../../main
+
+block variables
+    - var bgi = ''
+    - var title = 'Главная'
+
+block content
+    main.page
+        div(style="background-image:url(/images/content/index.png)").page__bg
+        section.page__first
+            .container
+                -
+                    var arr = [
+                        'images/content/slider/1.jpg',
+                        'images/content/slider/2.jpg',
+                        'images/content/slider/3.png',
+                        'images/content/slider/1.jpg',
+                        'images/content/slider/2.jpg',
+                        'images/content/slider/3.png',
+                    ];
+                include ../../components/slider/index
+
+
+
+

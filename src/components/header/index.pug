@@ -1,0 +1,20 @@
+header.header
+    .header__container
+        .header__left
+            include ../logo/index
+        .header__center
+            .header__contacts
+                .header__phone
+                    a(href="tel:+7(925)478-75-87") +7 (925) 478-75-87
+                .header__mail
+                    a(href="mailto:info@npprdt.ru") info@npprdt.ru
+                .header__link
+                    a(href="https://sk.ru/" target='_blank')
+                        img(src="images/content/logo-sk.svg" alt="lorem")
+            .header__nav
+                -
+                    var nav = ['О нас','Разработки','инновации','сколково','Контакты'];
+                each i in nav
+                    a(href="/").header__item= i
+        .header__right
+            button(type='button').header__call.btn заявка

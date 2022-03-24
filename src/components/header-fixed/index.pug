@@ -1,0 +1,12 @@
+.header-fixed
+    .header__container.header-fixed__container
+        .header-fixed__left
+            - var cls = 'logo--small'
+            include ../logo/index
+        .header-fixed__center
+            .header-fixed__item
+                a(href="tel:+7(925)478-75-87") +7 (925) 478-75-87
+            .header-fixed__item
+                a(href="mailto:info@npprdt.ru") info@npprdt.ru
+        .header-fixed__right
+            button(type='button').header__call.btn заявка

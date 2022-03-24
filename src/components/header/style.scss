@@ -1,0 +1,93 @@
+%contact {
+  font-family: Manrope;
+  color: $bg;
+  font-weight: 900;
+  @include tr;
+  &:hover{
+    color: $main;
+  }
+}
+
+.header {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 75px;
+
+
+  &__container {
+    width: 100%;
+    max-width: 1660px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  &__left {
+    width: 113px;
+  }
+
+  &__center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__right {
+    width: 113px;
+    padding-bottom: 25px;
+  }
+
+  &__contacts {
+    display: flex;
+    align-items: center;
+  }
+
+  &__phone {
+    @extend %contact;
+    margin-right: 70px;
+  }
+
+  &__mail {
+    @extend %contact;
+    margin-right: 25px;
+  }
+
+  &__link {
+    opacity: .5;
+    @include tr;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    a {
+      img {
+        display: block;
+      }
+    }
+  }
+
+  &__nav {
+    margin: 0 -20px;
+    display: flex;
+    gap: 40px;
+  }
+
+  &__item {
+    font-family: Manrope;
+    color: $bg;
+    text-transform: uppercase;
+    @include tr;
+
+    &:hover{
+      color: $main;
+    }
+  }
+}
