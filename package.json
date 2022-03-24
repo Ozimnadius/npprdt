@@ -11,10 +11,12 @@
   "devDependencies": {},
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
+    "gsap": "^3.9.1",
     "inputmask": "^5.0.7",
     "jquery": "^3.6.0",
     "jquery-validation": "^1.19.3",
     "normalize.css": "^8.0.1",
+    "scrolltrigger": "^1.0.1",
     "smart-grid": "^2.1.2",
     "swiper": "^8.0.7"
   }

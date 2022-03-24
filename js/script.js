@@ -85,11 +85,13 @@ class Menu {
     open(){
         this.menu.classList.add('active');
         this.active = true;
+        document.body.classList.add('ovh');
     }
 
     close(){
         this.menu.classList.remove('active');
         this.active = false;
+        document.body.classList.remove('ovh');
     }
 }
 
@@ -121,4 +123,40 @@ class MenuBtn {
         this.menu.close();
     }
 }
+window.addEventListener('load', function () {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const menuBtn = document.querySelector('.menu-btn');
+    const headerFixed = document.querySelector('.header-fixed');
+    const up = document.querySelector('.up');
+
+
+    if (document.querySelector('.page__first')) {
+        ScrollTrigger.create({
+            trigger: ".page__first",
+            start: 'top center',
+            end: 'center',
+            // markers: true,
+            onUpdate: self => {
+                if (self.isActive) {
+                    headerFixed.classList.remove('active');
+                    up.classList.remove('active');
+                    menuBtn.classList.remove('line');
+                } else {
+                    headerFixed.classList.add('active');
+                    up.classList.add('active');
+                    menuBtn.classList.add('line')
+                }
+            }
+        });
+    }
+});
+window.addEventListener('load', function () {
+    document.querySelector('.up').addEventListener('click', function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
+    });
+});
 //# sourceMappingURL=script.js.map

@@ -1,56 +1,59 @@
 div(data-menu='menu').menu
     .menu__btns
-        button(type='button').menu__call.btn заявка
+        button(type='button').menu__call.btn.btn--black заявка
         button(type='button' data-menu='btn').menu__close
             img(src="images/icons/close.png" alt="close")
     .menu__wrap
         .menu__left
             .menu__items
-                each i in ['О нас','Разработки','инновации','сколково','Контакты',]
+                each i in ['Главная','О нас','Разработки','инновации','сколково','Контакты',]
                     a(href="/").menu__item= i
         .menu__right
             .menu__grid
                 .menu__col
-                    .menu__content
-                        b Терминал электронного взаимодействия
-                        br
-                        | Основной функционал
-                        br
-                        | Технические характеристики терминала
-                        br
-                        | ПО для терминалов
-                        br
-                        | Меню терминала
-                        br
-                        br
-                        b ПО Интерактивного взаимодействия
-                        br
-                        | Основной функционал
-                        br
-                        | Назначение системы видеонаблюдения
-                        br
-                        | Состав и дополнительные модули системы
-                        br
-                        | Информация, отображающаеся на карте
-                        br
-                        | Пример работы интерактивной карты
-                        br
-                        | Преимущества и возможности интерактивной карты
-                        br
-                        | Устройство хранения и обработки данных видеоизображения
-                        br
-                        | Сервер хранения данных AZIMUT - RECORD - IPV - S
-                        br
-                        | На данный момент наша система развернута в ряде Российских регионов (полностью или частично):
-                        br
-                        br
-                        b Система мониторинга
-                        br
-                        br
-                        b ПО управления базами данных
-                        br
-                        br
-                        b Разработки под ключ
+                    -
+                        var sections = [
+                            {
+                                section: 'Терминал электронного взаимодействия',
+                                links: [
+                                    'Основной функционал',
+                                    'Технические характеристики терминала',
+                                    'ПО для терминалов',
+                                    'Меню терминала',
+                                ]
+                            },
+                            {
+                                section: 'ПО Интерактивного взаимодействия',
+                                links: [
+                                    'Основной функционал',
+                                    'Назначение системы видеонаблюдения',
+                                    'Состав и дополнительные модули системы',
+                                    'Информация, отображающаеся на карте',
+                                    'Пример работы интерактивной карты',
+                                    'Преимущества и возможности интерактивной карты',
+                                    'Устройство хранения и обработки данных видеоизображения',
+                                    'Сервер хранения данных AZIMUT - RECORD - IPV - S',
+                                    'На данный момент наша система развернута в ряде Российских регионов(полностью или частично):',
+                                ]
+                            },
+                            {
+                                section: 'Система мониторинга',
+                            },
+                            {
+                                section: 'ПО управления базами данных',
+                            },
+                            {
+                                section: 'Разработки под ключ',
+                            }
+                        ];
+                    .menu__sections
+                        each i in sections
+                            .menu__section
+                                a(href="/").menu__section-link= i.section
+                                if i.links
+                                    .menu__links
+                                        each link in i.links
+                                            a(href="/").menu__link= link
                 .menu__col
                     .menu__logo
                         img(src="/images/content/logo-grey.png" alt="logo")
@@ -58,10 +61,10 @@ div(data-menu='menu').menu
                         a(href="tel:+7(925)478-75-87").menu__contact
                             img(src="/images/icons/phone.png" alt="lorem")
                             span +7 (925) 478-75-87
-                        a(href="mailto:info@npprdt.ru").menu__contact
+                        a(href="mailto:info@npprdt.ru").menu__contact.menu__contact--big
                             img(src="/images/icons/mail.png" alt="lorem")
                             span info@npprdt.ru
-                        span.menu__contact.menu__contact--addr
+                        span.menu__contact.menu__contact--normal
                             img(src="/images/icons/pin.png" alt="lorem")
                             span 123308, г. Москва, проспект Маршала Жукова, д.2
 

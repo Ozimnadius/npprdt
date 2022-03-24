@@ -1,5 +1,175 @@
+.menu {
+  position: fixed;
+  z-index: 101;
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  width: 100%;
+  background: $bg;
 
-.menu-btn{
+  box-sizing: border-box;
+
+  @include tr;
+  border-left: 113px solid $btn;
+
+  &.active {
+    left: 0;
+  }
+
+  &__btns {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+
+    display: flex;
+    align-items: center;
+    gap: 60px;
+  }
+
+  &__close{
+    @include tr;
+
+    &:hover{
+      opacity: .7;
+    }
+  }
+
+  &__wrap {
+    height: 100%;
+    align-items: flex-start;
+    display: flex;
+  }
+
+  &__left {
+    background: $bg3;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 600px;
+    flex-shrink: 0;
+  }
+
+  &__items {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-grow: 1;
+  }
+
+  &__item {
+    display: block;
+    color: $btn;
+    font-family: Manrope;
+    font-size: 67px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+    @include tr;
+
+    &:hover {
+      color: $main;
+    }
+  }
+
+  &__right {
+    flex-grow: 1;
+    padding-top: 70px;
+    padding-bottom: 100px;
+    padding-right: 50px;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+  }
+
+  &__sections{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    line-height: 1.14;
+  }
+
+  &__section{
+
+  }
+
+  &__section-link{
+    font-weight: 700;
+    @include tr;
+
+    &:hover{
+      color: $main;
+    }
+  }
+
+  &__links{
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__link{
+    @include tr;
+
+    &:hover{
+      color: $main;
+    }
+  }
+
+  &__col {
+    padding-left: 45px;
+    padding-right: 25px;
+    padding-top: 25px;
+    padding-bottom: 45px;
+
+    &:first-child {
+      border-right: 5px solid #212a63;
+    }
+
+    &:last-child {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      gap: 90px;
+    }
+  }
+
+  &__contacts{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__contact{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    img{
+      display: block;
+    }
+
+
+    color: #6c72b0;
+    font-family: Manrope;
+    font-weight: 900;
+    font-size: 23px;
+
+    &--big{
+      font-size: 28px;
+    }
+
+    &--normal{
+      font-weight: 400;
+      align-items: flex-start;
+    }
+  }
+}
+
+.menu-btn {
   position: fixed;
   z-index: 101;
   top: 50%;
@@ -7,36 +177,40 @@
   transform: translateY(-50%);
   width: 155px;
   height: 583px;
-  background: url("/images/content/menu.png") 0 0 no-repeat;
+  background: url("/images/content/menu-no-line.png") 0 0 no-repeat;
   background-size: cover;
   padding-left: 20px;
 
   display: flex;
   align-items: center;
 
-  &__wrap{
+  &.line{
+    background-image: url("/images/content/menu.png");
+  }
+
+  &__wrap {
     position: relative;
   }
 
-  &__btn{
+  &__btn {
     display: flex;
     flex-direction: column;
     gap: 6px;
     color: $bg;
     @include tr;
 
-    &:hover{
+    &:hover {
       color: $main;
     }
 
-    &-line{
+    &-line {
       width: 43px;
       height: 4px;
       background: currentColor;
     }
   }
 
-  &__title{
+  &__title {
     position: absolute;
     top: calc(100% + 35px);
     left: 50%;

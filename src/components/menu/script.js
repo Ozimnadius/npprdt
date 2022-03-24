@@ -20,11 +20,13 @@ class Menu {
     open(){
         this.menu.classList.add('active');
         this.active = true;
+        document.body.classList.add('ovh');
     }
 
     close(){
         this.menu.classList.remove('active');
         this.active = false;
+        document.body.classList.remove('ovh');
     }
 }
 
