@@ -2,7 +2,7 @@
 header('Content-Type: application/json');
 
 $data = $_POST;
-$action = $data['action'];
+$action = $data['event'];
 
 switch ($action) {
     case 'call':

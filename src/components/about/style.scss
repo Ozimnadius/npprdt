@@ -1,0 +1,61 @@
+.about{
+  padding-bottom: 50px;
+
+  %ml{
+    margin-left: 150px;
+  }
+
+  &__container{
+    width: 100%;
+    max-width: 1660px;
+    padding: 0 20px;
+    margin: 0 auto;
+
+  }
+
+  &__flex{
+    display: flex;
+    gap: 40px;
+   @extend %ml
+  }
+
+  &__title{
+    margin-bottom: 25px;
+    @extend %ml
+  }
+
+  &__content{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+
+    h4{
+      color: $btn;
+      font-family: Manrope;
+      font-size: 32px;
+      text-transform: uppercase;
+    }
+
+    ul{
+      line-height: 1.57;
+      li{
+        &:before{
+          content: '- ';
+          display: inline;
+        }
+      }
+    }
+
+    &--white{
+      color: $bg;
+    }
+  }
+
+  &__img{
+    img{
+      display: block;
+    }
+  }
+
+
+}

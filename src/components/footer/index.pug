@@ -1,0 +1,17 @@
+footer.footer
+    .footer__container
+        .footer__left
+            .footer__list
+                each i in ['О нас','Разработки','инновации','сколково','Контакты']
+                    a(href="#").footer__item= i
+        .footer__center
+            .footer__img
+                img(src="images/content/logo-big.png" alt="logo")
+        .footer__right
+            .footer__contacts
+                a(href="tel:+7(925)478-75-87").footer__contact +7 (925) 478-75-87
+                a(href="mailto:info@npprdt.ru").footer__contact.footer__contact--big info@npprdt.ru
+                span.footer__contact.footer__contact--400
+                    | 123308, г. Москва,
+                    br
+                    | проспект Маршала Жукова, д.2

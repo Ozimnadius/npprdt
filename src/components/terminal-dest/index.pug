@@ -1,0 +1,8 @@
+.terminal-dest
+    h2.terminal-dest__title.title-small Назначение терминала:
+    .terminal-dest__list
+        each i,x in ['сокращение затрат на персонал (сотрудников клиентских служб) и содержание помещений без снижения качества обслуживания страхователей','уменьшение очередей','уменьшение времени обслуживания посетителей, путем предоставления сервисов для самостоятельного обслуживания']
+            .terminal-dest__item
+                .terminal-dest__img
+                    img(src="images/content/terminal-dest/"+(x+1)+".png" alt="lorem")
+                .terminal-dest__txt= i

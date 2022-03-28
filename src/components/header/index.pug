@@ -1,20 +1,33 @@
-header.header
+header(class='header--'+header).header
     .header__container
         .header__left
             include ../logo/index
         .header__center
             .header__contacts
                 .header__phone
-                    a(href="tel:+7(925)478-75-87") +7 (925) 478-75-87
+                    a(href="tel:+7(925)478-75-87")
+                        img(src="/images/icons/phone.png" alt="lorem")
+                        |+7 (925) 478-75-87
                 .header__mail
-                    a(href="mailto:info@npprdt.ru") info@npprdt.ru
+                    a(href="mailto:info@npprdt.ru")
+                        img(src="/images/icons/mail.png" alt="lorem")
+                        | info@npprdt.ru
                 .header__link
                     a(href="https://sk.ru/" target='_blank')
                         img(src="images/content/logo-sk.svg" alt="lorem")
             .header__nav
+                .header__item
+                    a(href="#").header__item-link О нас
+                .header__item
+                    a(href="#").header__item-link Разработки
+                    .header__drop
+                        .header__drop-list
+                            each i in ['Терминал электронного взаимодействия','ПО Интерактивного взаимодействия','Система мониторинга','ПО управления базами данных','Разработки под ключ']
+                                a(href="#").header__drop-item= i
                 -
-                    var nav = ['О нас','Разработки','инновации','сколково','Контакты'];
+                    var nav = ['инновации','сколково','Контакты'];
                 each i in nav
-                    a(href="/").header__item= i
+                    .header__item
+                        a(href="#").header__item-link= i
         .header__right
-            button(type='button').header__call.btn заявка
+            button(type='button' data-call='btn').header__call.btn заявка

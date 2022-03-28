@@ -15,14 +15,18 @@
 @import "components/menu/style";
 @import "components/up/style";
 @import "components/page-about/style";
+@import "components/page-projects/style";
+@import "components/call/style";
+@import "components/about/style";
+@import "components/devs/style";
+@import "components/terminal-about/style";
+@import "components/terminal-dest/style";
+@import "components/terminal-functional/style";
+@import "components/terminal-chars/style";
+@import "components/terminal-archs/style";
+@import "components/terminal-principles/style";
+@import "components/terminal-list/style";
+@import "components/terminal-menu/style";
 
 //PAGES
 @import "pages/style";
-
-
-.debug {
-  @include debug(rgba(0,0,0,0.3), 1px solid red);
-  z-index: 100;
-  top: 0;
-  display: none;
-}

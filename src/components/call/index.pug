@@ -1,0 +1,39 @@
+div(data-call='call').call
+    .call__wrap
+        form(action='/php/ajax.php' method='post' data-call='form').call__form
+                button(type='button' data-call='close').call__close
+                    img(src="images/icons/close.png" alt="close")
+                .call__left
+                    .call__txt
+                        | Остались вопросы?
+                        br
+                        | Оставьте заявку прямо сейчас, мы ответим!
+                .call__right
+                    .call__fields
+                        .call__field
+                            .call__name Ваше имя*:
+                            input(type='text' name='name' required data-call='input').call__input
+                        .call__field
+                            .call__name Ваш E-mail*:
+                            input(type='email' name='email' required data-call='input').call__input
+                        .call__field
+                            .call__name Ваше телефон*:
+                            input(type='tel' name='tel' required data-call='input').call__input
+                        .call__field
+                            .call__name Сообщение *:
+                            input(type='text' name='msg' required data-call='input').call__input
+                    .call__accept
+                        label.accept
+                            input(type='checkbox' name='accept' checked).accept__input
+                            span.accept__fake
+                                span.accept__check
+                                    img(src="images/icons/check.png" alt="check")
+                                span.accept__txt Я согласен на обработку персональных данных
+                    .call__captcha
+                        #g-recaptcha
+                    button(type='submit').call__submit.btn.btn--btn.disabled отправить заявку
+                    input(type='hidden' name='event' value='call')
+                div(data-call='suc').call__suc
+                    |Спасибо
+                    br
+                    |Мы скоро с Вами свяжемся!

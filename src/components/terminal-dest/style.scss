@@ -1,0 +1,28 @@
+.terminal-dest{
+  padding-top: 85px;
+  padding-bottom: 80px;
+
+  &__title{
+    margin-bottom: 100px;
+  }
+
+  &__list{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 40px;
+  }
+
+  &__item{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__img{
+    img{
+      display: block;
+    }
+  }
+}

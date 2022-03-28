@@ -1,0 +1,47 @@
+extends ../../main
+
+block variables
+    - var header = 'about'
+    - var title = 'Разработки'
+
+block content
+    main.page.terminal
+        div(style="background-image:url(/images/content/terminal.png)").page__bg
+        section.page__first
+            .container
+                include ../../components/terminal-about/index
+        section.page__section
+            .container
+                include ../../components/terminal-dest/index
+        section.page__section
+            .container
+                include ../../components/terminal-functional/index
+        section.page__section
+            .container
+                include ../../components/terminal-chars/index
+        section.page__section.grey
+            .container
+                include ../../components/terminal-archs/index
+        section.page__section.grey
+            .container
+                include ../../components/terminal-principles/index
+        section.page__section
+            .container
+                include ../../components/terminal-list/index
+        section.page__section
+            .container
+                include ../../components/terminal-menu/index
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -200,7 +200,8 @@
     @include tr;
 
     &:hover {
-      color: $main;
+      color: $bg2;
+
     }
 
     &-line {
@@ -212,13 +213,14 @@
 
   &__title {
     position: absolute;
-    top: calc(100% + 35px);
+    top: calc(100% + 20px);
     left: 50%;
     writing-mode: vertical-lr;
     color: $bg;
     font-size: 14px;
     text-transform: uppercase;
     transform: rotate(-180deg) translateX(50%);
+    white-space: nowrap;
   }
 
 

@@ -5,4 +5,8 @@
 // @prepros-append components/menu/script.js
 // @prepros-append components/scrollTrigger/script.js
 // @prepros-append components/up/script.js
+// @prepros-append components/call/script.js
+// @prepros-append components/devs/script.js
+// @prepros-append components/terminal-principles/script.js
+// @prepros-append components/terminal-menu/script.js
 

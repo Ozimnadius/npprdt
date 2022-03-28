@@ -1,0 +1,46 @@
+.terminal-menu{
+  padding-top: 70px;
+  padding-bottom: 160px;
+
+  &__title{
+    margin-bottom: 90px;
+  }
+
+  &__slider{
+    position: relative;
+    margin-bottom: 45px;
+  }
+
+  &__swiper{
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__slide{
+    img{
+      display: block;
+    }
+  }
+
+  &__pag{
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    right: 60px;
+    left: initial!important;
+    bottom: initial!important;
+    transform: translateY(-50%);
+  }
+
+  &__link{
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    color: #b2b2b2;
+
+    img{
+      display: block;
+    }
+  }
+}

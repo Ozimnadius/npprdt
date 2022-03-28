@@ -27,6 +27,14 @@
     }
   }
 
+  &--btn{
+    box-shadow: 0px 0px 10px 10px rgba($btn, 0.2);
+
+    &:hover{
+      box-shadow: 0px 0px 10px 10px rgba($btn, 0.4);
+    }
+  }
+
 }
 
 .ovh {
@@ -34,9 +42,58 @@
 }
 
 .title{
+  font-family: Manrope;
   font-size: 90px;
   font-weight: 900;
   color: $btn;
   line-height: 1;
   text-transform: uppercase;
+}
+
+.title-small{
+  color: $btn;
+  font-family: Manrope;
+  font-size: 28px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.disabled{
+  filter: grayscale(1);
+  pointer-events: none;
+}
+
+.fs0{
+  flex-shrink: 0;
+}
+
+.grey{
+  background: #f1f1f1;
+}
+
+.pag{
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  gap: 10px;
+
+  &--vertical{
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .swiper-pagination-bullet{
+    width: 15px;
+    height: 15px;
+    background-color: #6e73b1;
+    opacity: 1;
+    pointer-events: all;
+    margin: 0!important;
+
+
+    &-active{
+      background-color: $btn;
+    }
+  }
+
 }

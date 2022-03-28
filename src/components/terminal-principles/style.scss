@@ -1,0 +1,25 @@
+.terminal-principles{
+  padding-bottom: 110px;
+
+  &__title{
+    margin-bottom: 110px;
+  }
+
+  &__slider{
+    position: relative;
+  }
+
+  &__slide{
+    img{
+      display: block;
+    }
+  }
+
+  &__pag{
+    position: absolute;
+    z-index: 10;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+  }
+}

@@ -1,0 +1,58 @@
+.terminal-about {
+
+  &__grid {
+    margin-right: -160px;
+    display: grid;
+    grid-template-columns: 1fr 610px;
+  }
+
+  &__title {
+    margin-bottom: 35px;
+  }
+
+  &__content {
+    color: $bg;
+
+    h2, h3, h4 {
+      color: $btn;
+      font-family: Manrope;
+      font-size: 32px;
+      font-weight: 400;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    p {
+      text-indent: 20px;
+    }
+  }
+
+  &__right {
+    display: flex;
+    gap: 40px;
+  }
+
+  &__img {
+    flex-shrink: 0;
+    max-width: 290px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    font-size: 23px;
+    color: $bg;
+  }
+
+  &__li {
+    text-indent: 20px;
+    line-height: 1.39;
+
+    &:before {
+      content: '- ';
+      display: inline;
+    }
+  }
+}

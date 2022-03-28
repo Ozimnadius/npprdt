@@ -14,7 +14,7 @@ class Menu {
         Object.assign(this, def, options);
 
         this.btnsObj = Array.from(this.btns).map(i => new MenuBtn(i, this));
-        this.title.innerHTML = document.title;
+        // this.title.innerHTML = document.title;
     }
 
     open(){

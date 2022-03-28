@@ -1,0 +1,51 @@
+extends ../../main
+
+block variables
+    - var header = 'about'
+    - var title = 'Разработки'
+
+block content
+    main.page
+        div(style="background-image:url(/images/content/devs.png)").page__bg
+        section.page__first
+            .devs
+                .devs__container
+                    h2.devs__title.title разработки
+                -
+                    var arr = [
+                        {
+                            title: 'Терминал электронного взаимодействия',
+                        },
+                        {
+                            title: 'ПО Интерактивного взаимодействия',
+                        },
+                        {
+                            title: 'Система мониторинга',
+                        },
+                        {
+                            title: 'ПО управления базами данных',
+                        },
+                        {
+                            title: 'Разработки под ключ.',
+                        }
+                    ];
+                .devs__wrap
+                    .swiper.devs__swiper
+                        .swiper-wrapper
+                            each i in arr
+                                a(href="#").swiper-slide.dev
+                                    span.dev__wrap
+                                        span.dev__title= i.title
+                                        span.dev__txt= i.title
+                                        span.dev__link
+                                            span.dev__link-txt подробнее
+                                            span.dev__link-img
+                                                img(src="images/icons/double-arr.png" alt="link")
+
+
+
+
+
+
+
+
