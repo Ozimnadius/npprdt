@@ -21,58 +21,11 @@ $vh: 1080;
 }
 
 @mixin content() {
-  ul {
-    margin: 1em 0;
-    padding-left: 40px;
-
-    li {
-      list-style: disc;
-    }
-  }
-
-  h1 {
-    font-size: 40px;
-  }
-  h2 {
-    font-size: 32px;
-  }
-  h3 {
-    font-size: 28px;
-  }
-  h4 {
-    font-size: 24px;
-  }
-  h5 {
-    font-size: 20px;
-  }
-  h6 {
-    font-size: 16px;
-  }
-  p {
-    margin-bottom: 20px;
-  }
 
 }
 
 @mixin headers() {
-  h1 {
-    font-size: 40px;
-  }
-  h2 {
-    font-size: 32px;
-  }
-  h3 {
-    font-size: 28px;
-  }
-  h4 {
-    font-size: 24px;
-  }
-  h5 {
-    font-size: 20px;
-  }
-  h6 {
-    font-size: 16px;
-  }
+
 }
 
 @mixin tr() {

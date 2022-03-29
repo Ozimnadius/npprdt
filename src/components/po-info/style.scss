@@ -1,0 +1,14 @@
+.po-info {
+  padding-top: 110px;
+  padding-bottom: 330px;
+
+  &__title {
+    margin-bottom: 80px;
+  }
+
+  &__cols {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+}

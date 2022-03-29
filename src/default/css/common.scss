@@ -71,6 +71,9 @@
   background: #f1f1f1;
 }
 
+.bg2{
+  background-color: $bg2;
+}
 .pag{
   display: flex;
   justify-content: center;
@@ -96,4 +99,57 @@
     }
   }
 
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+
+  p{
+    text-indent: 25px;
+  }
+
+  h2,h3,h4{
+    color: $btn;
+    font-family: Manrope;
+    font-size: 32px;
+    text-transform: uppercase;
+  }
+
+  ul{
+    line-height: 1.57;
+
+    li{
+      &:before{
+        content: '- ';
+        display: inline;
+      }
+    }
+  }
+
+  &--nogap{
+    gap: 0;
+  }
+
+  &--ul-2{
+    ul{
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      line-height: 1.42;
+
+      li{
+        &:before{
+          content: '';
+          display: inline-block;
+          width: 8px;
+          height: 8px;
+          background: $btn;
+          margin-right: 10px;
+          margin-bottom: 3px;
+        }
+      }
+    }
+  }
 }

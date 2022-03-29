@@ -1,0 +1,31 @@
+.po-about{
+  padding-bottom: 15px;
+  &__title{
+    margin-bottom: 40px;
+  }
+
+  &__grid{
+    margin-right: -160px;
+    display:grid;
+    grid-template-columns: 1fr 580px;
+    gap: 40px;
+  }
+
+  &__content{
+    color: $bg;
+
+    h2, h3, h4 {
+      color: $btn;
+      font-family: Manrope;
+      font-size: 32px;
+      font-weight: 400;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    p {
+      text-indent: 20px;
+    }
+  }
+
+}

@@ -34,14 +34,7 @@
   }
 
   &__content {
-    display: flex;
-    flex-direction: column;
-    gap: 35px;
     color: $bg;
-
-    p {
-      text-indent: 30px;
-    }
   }
 
   &__right {

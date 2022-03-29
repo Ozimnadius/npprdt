@@ -1,0 +1,25 @@
+.po-regs{
+  padding-top: 110px;
+  padding-bottom: 360px;
+
+  &__title{
+    margin-bottom: 50px;
+  }
+
+  &__cols{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 40px;
+    margin-right: -140px;
+  }
+
+  &__li{
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    margin-top: -10px;
+    &:before{
+      content: url("/images/icons/pin-big.png");
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.po-raid{
+  padding-top: 110px;
+  margin-right: -160px;
+  padding-bottom: 135px;
+
+  &__title{
+    margin-bottom: 80px;
+  }
+
+  &__cols{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 40px;
+  }
+
+  &__left{
+    padding-top: 40px;
+  }
+
+  &__img{
+    margin-bottom: 15px;
+  }
+}

@@ -1,0 +1,63 @@
+.po-storage {
+  position: relative;
+  padding-top: 235px;
+  padding-bottom: 380px;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 47%;
+    background-color: $bg2;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 40px;
+    margin-right: -160px;
+    align-items: center;
+  }
+
+  &__left {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &__wrap{
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    color: $bg2;
+    line-height: 1;
+
+    &--right{
+      text-align: right;
+    }
+  }
+
+  &__vals{
+    color: $bg2;
+    font-size: 123px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 35px;
+    line-height: 1;
+  }
+
+  &__content {
+    color: $bg;
+  }
+
+
+}

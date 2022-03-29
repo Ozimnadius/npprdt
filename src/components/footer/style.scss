@@ -21,7 +21,7 @@
     @include tr;
 
     &:hover{
-      color: $main;
+      color: $btn;
     }
   }
 
@@ -37,6 +37,11 @@
     font-size: 23px;
     @include tr;
 
+    display: flex;
+    gap: 25px;
+    align-items: center;
+
+
     &--big{
       font-size: 28px;
     }
@@ -46,7 +51,7 @@
     }
 
     &:hover{
-      color: $main;
+      color: $btn;
     }
   }
 }

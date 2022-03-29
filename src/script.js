@@ -9,4 +9,5 @@
 // @prepros-append components/devs/script.js
 // @prepros-append components/terminal-principles/script.js
 // @prepros-append components/terminal-menu/script.js
+// @prepros-append components/po-functional/script.js
 

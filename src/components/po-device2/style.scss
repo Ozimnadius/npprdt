@@ -1,0 +1,18 @@
+.po-device2{
+  padding-top: 120px;
+  padding-bottom: 285px;
+
+  &__wrap{
+    margin-right: -160px;
+  }
+
+  &__content{
+    margin-bottom: 15px;
+  }
+
+  &__cols{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 40px;
+  }
+}

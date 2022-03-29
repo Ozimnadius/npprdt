@@ -1,0 +1,13 @@
+.po-exmp
+    h2.po-exmp__title.title-small Пример работы интерактивной карты
+    .po-exmp__slider.terminal-menu__slider
+        .po-exmp__swiper.swiper.terminal-menu__swiper
+            .swiper-wrapper
+                each i in [1,2,3]
+                    a(href="images/content/po-exmp/" + i + ".png" data-fancybox="exmp").swiper-slide.terminal-menu__slide
+                        img(src="images/content/po-exmp/" + i + ".png" alt="lorem")
+                a(href="https://www.youtube.com/watch?v=lYA2_uF-9Ac" data-fancybox="exmp").swiper-slide.terminal-menu__slide
+                    img(src="images/content/po-exmp/1.png" alt="lorem")
+                    span.terminal-menu__slide-yt
+                        img(src="images/icons/youtube.png" alt="lorem")
+        .pag.pag--vertical.terminal-menu__pag

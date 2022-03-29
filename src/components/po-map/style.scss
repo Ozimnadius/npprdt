@@ -1,0 +1,19 @@
+.po-map{
+  padding-top: 230px;
+  padding-bottom: 450px;
+
+  display:grid;
+  grid-template-columns: 560px 1fr;
+  gap: 40px;
+
+  img{
+    display: block;
+  }
+
+  &__content{
+    color: $bg;
+    p{
+      text-indent: 20px;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.po-advs {
+  padding-top: 110px;
+  padding-bottom: 80px;
+
+  &__title {
+    margin-bottom: 75px;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+}
+
+.po-adv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 30px;
+
+  &__txt {
+    text-indent: 20px;
+  }
+}

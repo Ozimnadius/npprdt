@@ -1,0 +1,20 @@
+.po-pos{
+  padding-top: 110px;
+  padding-bottom: 175px;
+
+  &__title{
+    margin-bottom: 80px;
+  }
+
+  &__cols{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 40px;
+    margin-bottom: 30px;
+    margin-right: -160px;
+  }
+
+  &__content{
+    margin-right: -160px;
+  }
+}

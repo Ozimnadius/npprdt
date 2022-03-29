@@ -1,0 +1,19 @@
+.po-system {
+  padding-bottom: 145px;
+  &__title {
+    margin-bottom: 90px;
+  }
+
+  &__items{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 40px;
+  }
+
+  &__item{
+    background-color: #e5e5e5;
+    padding: 45px 30px;
+    min-height: 565px;
+    text-align: center;
+  }
+}
