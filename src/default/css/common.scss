@@ -48,6 +48,10 @@
   color: $btn;
   line-height: 1;
   text-transform: uppercase;
+
+  &--under{
+    text-decoration: underline;
+  }
 }
 
 .title-small{
@@ -105,6 +109,10 @@
   display: flex;
   flex-direction: column;
   gap: 35px;
+
+  &--white{
+    color: $bg;
+  }
 
   p{
     text-indent: 25px;

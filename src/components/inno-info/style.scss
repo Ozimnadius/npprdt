@@ -1,0 +1,41 @@
+.inno-info{
+  padding-top: 110px;
+  padding-bottom: 70px;
+
+  &__items{
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 110px auto 100px;
+  }
+
+  &__item{
+    display: flex;
+    gap: 40px;
+
+    &:before{
+      content: '';
+      width: 90px;
+      height: 90px;
+      background-size: auto 100%;
+      background-position: center 0;
+      background-repeat: no-repeat;
+      flex-shrink: 0;
+    }
+
+    @for $i from 1 through 4 {
+      &:nth-child(#{$i}){
+        &:before{
+          background-image: url("/images/content/page-projects/#{$i}.png");
+        }
+      }
+    }
+
+    .content{
+      max-width: 850px;
+    }
+
+  }
+}

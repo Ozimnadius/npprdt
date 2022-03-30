@@ -1,0 +1,33 @@
+.contacts-feed
+    h2.contacts-feed__title.title Обратная связь
+    .contacts-feed__call
+        form(action='/php/ajax.php' method='post' data-call='form').contacts-feed__form
+            .contacts-feed__wrap
+                .call__fields.contacts-feed__fields
+                    .call__field
+                        .call__name Ваше имя*:
+                        input(type='text' name='name' required data-call='input').call__input
+                    .call__field
+                        .call__name Ваш E-mail*:
+                        input(type='email' name='email' required data-call='input').call__input
+                    .call__field
+                        .call__name Ваше телефон*:
+                        input(type='tel' name='tel' required data-call='input').call__input
+                    .call__field
+                        .call__name Сообщение *:
+                        input(type='text' name='msg' required data-call='input').call__input
+                .call__accept.contacts-feed__accept
+                    label.accept
+                        input(type='checkbox' name='accept' checked).accept__input
+                        span.accept__fake
+                            span.accept__check
+                                img(src="images/icons/check.png" alt="check")
+                            span.accept__txt Я согласен на обработку персональных данных
+                .call__captcha.contacts-feed__captcha
+                    #g-recaptcha2
+                button(type='submit').btn.btn--btn.disabled.contacts-feed__submit отправить заявку
+                input(type='hidden' name='event' value='call')
+            div(data-call='suc').call__suc
+                | Спасибо
+                br
+                | Мы скоро с Вами свяжемся!

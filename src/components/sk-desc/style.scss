@@ -1,0 +1,23 @@
+.sk-desc{
+  margin-right: -150px;
+  padding-top: 110px;
+  padding-bottom: 130px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &__item{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 40px;
+  }
+
+  &__img{
+    border: 3px solid $btn;
+    img{
+      display: block;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+extends ../../main
+
+block variables
+    - var header = 'about'
+    - var title = 'Сколково'
+
+block content
+    main.page
+        div(style="background-image:url(/images/content/sk.png)").page__bg
+        section.page__first
+            .container
+                include ../../components/sk-about/index
+        section.page__section
+            .container
+                include ../../components/sk-desc/index
+
+
+
+
+
+
+

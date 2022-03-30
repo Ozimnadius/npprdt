@@ -1,0 +1,23 @@
+.inno-desc{
+  padding-bottom: 45px;
+
+  &__title{
+    margin-bottom: 40px;
+  }
+
+  &__grid{
+    display:grid;
+    grid-template-columns: 1fr 410px;
+    gap: 40px;
+  }
+
+  &__content{
+    color: $bg;
+  }
+
+  &__img{
+    img{
+      display: block;
+    }
+  }
+}

@@ -53,7 +53,7 @@
   &__close{
     width: 30px;
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     top: 40px;
     right: 40px;
   }
@@ -63,6 +63,7 @@
     flex-direction: column;
     gap: 70px;
     margin-bottom: 35px;
+
   }
 
   &__field {
@@ -89,6 +90,7 @@
 
   &__suc{
     position: absolute;
+    z-index: 2;
     top: 0;
     bottom: 0;
     left: 0;

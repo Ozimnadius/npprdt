@@ -1,0 +1,28 @@
+extends ../../main
+
+block variables
+    - var header = 'about header--inno';
+    - var title = 'Инновации';
+
+block content
+    main.page.inno
+        div(style="background-image:url(/images/content/inno.png)").page__bg
+        section.page__first
+            .container
+                include ../../components/inno-desc/index
+        section.page__section
+            .container
+                include ../../components/inno-about/index
+        section.page__section.bg2
+            .container
+                include ../../components/inno-azimut/index
+        section.page__section
+            .container
+                include ../../components/inno-info/index
+
+
+
+
+
+
+

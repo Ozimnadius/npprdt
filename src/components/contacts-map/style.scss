@@ -1,0 +1,46 @@
+.contacts-map {
+  padding-bottom: 45px;
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__grid {
+    display:grid;
+    grid-template-columns: 1fr auto;
+    gap: 40px;
+    align-items: flex-end;
+  }
+
+  &__map{
+    height: 445px;
+  }
+
+  &__contacts{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__contact{
+    color: $bg;
+    font-family: Manrope;
+    font-size: 23px;
+    font-weight: 700;
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+
+    &--400{
+      font-weight: 400;
+    }
+
+    &--big{
+      font-size: 28px;
+    }
+
+    img{
+      flex-shrink: 0;
+      transform: translateY(-10px);
+    }
+  }
+}

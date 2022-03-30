@@ -1,0 +1,46 @@
+.contacts-feed{
+  padding-top: 220px;
+  padding-bottom: 65px;
+
+  &__title{
+    margin-bottom: 90px;
+  }
+
+  &__call{
+    max-width: 760px;
+    width: 100%;
+
+    &.sended{
+      .call__suc{
+        display: flex;
+      }
+    }
+  }
+
+  &__form{
+    position: relative;
+    width: 100%;
+    padding-left: 35px;
+  }
+
+  &__fields{
+    gap: 90px;
+    margin-bottom: 45px;
+  }
+
+  &__accept{
+    margin-bottom: 50px;
+  }
+
+  &__captcha{
+    margin-bottom: 100px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__submit{
+    width: auto;
+    padding: 0 15px;
+  }
+
+}

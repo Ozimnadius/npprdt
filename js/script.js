@@ -160,7 +160,12 @@ window.addEventListener('load', function () {
     });
 });
 window.addEventListener('load', function () {
-    new Call();
+
+    let form = new Call('.call');
+
+    let contactsForm = new Call('.contacts-feed__call');
+
+    document.querySelectorAll('[data-call="btn"]').forEach(i => new CallBtns(i, form));
 });
 
 var onloadCallback = function () {
@@ -169,10 +174,10 @@ var onloadCallback = function () {
         'callback': verifyCallback,
     });
 
-    if (document.querySelector('g-recaptcha2')) {
+    if (document.querySelector('#g-recaptcha2')) {
         grecaptcha.render('g-recaptcha2', {
             'sitekey': '6LfqSgwfAAAAAIe6az1OO_dkY5X5bq9TdSxWCQbf',
-            'callback': verifyCallback,
+            'callback': verifyCallback2,
         });
     }
 };
@@ -180,35 +185,42 @@ var onloadCallback = function () {
 var verifyCallback = function (response) {
     document.querySelector('.call__submit').classList.remove('disabled');
 };
+var verifyCallback2 = function (response) {
+    document.querySelector('.contacts-feed__submit').classList.remove('disabled');
+};
+
 
 class Call {
-    constructor(options) {
+    constructor(selector = '[data-call="call"]', options) {
+
+        let call = document.querySelector(selector);
+
         let def = {
-            call: document.querySelector('[data-call="call"]'),
-            form: document.querySelector('[data-call="form"]'),
-            suc: document.querySelector('[data-call="suc"]'),
-            btns: document.querySelectorAll('[data-call="btn"]'),
-            closeBtn: document.querySelector('[data-call="close"]'),
+            call: call,
+            form: call.querySelector('[data-call="form"]'),
+            suc: call.querySelector('[data-call="suc"]'),
+            closeBtn: call.querySelector('[data-call="close"]'),
             active: false
         }
 
         Object.assign(this, def, options);
-        this.btnsArr = Array.from(this.btns).map(i => new CallBtns(i, this));
+
 
         this.events();
-
     }
 
     events() {
-        this.call.addEventListener('click', (e)=>{
+
+        this.call.addEventListener('click', (e) => {
             let target = e.target;
 
-            if(!target.closest('.call__form') || target.closest('.call__close')){
+            if (!target.closest('[data-call="form"]') || target.closest('[data-call="close"]')) {
                 this.close();
             }
         });
 
         this.form.addEventListener('submit', this.submit);
+
     }
 
     open() {
@@ -222,14 +234,14 @@ class Call {
         this.active = false;
     }
 
-    submit=(e)=>{
+    submit = (e) => {
         e.preventDefault();
 
-        fetch(this.form.action,{
+        fetch(this.form.action, {
             method: 'POST',
             body: new FormData(this.form)
-        }).then(response => response.json()).then( (data)=>{
-            if(data.status){
+        }).then(response => response.json()).then((data) => {
+            if (data.status) {
                 this.call.classList.add('sended');
                 this.form.reset();
             }
@@ -245,7 +257,7 @@ class CallBtns {
         this.events();
     }
 
-    events(){
+    events() {
         this.btn.addEventListener('click', this.click);
     }
 

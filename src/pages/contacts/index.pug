@@ -1,0 +1,24 @@
+extends ../../main
+
+block variables
+    - var header = 'about'
+    - var title = 'Контакты'
+
+block content
+    main.page
+        div(style="background-image:url(/images/content/contacts.png)").page__bg
+        section.page__first
+            .container
+                include ../../components/contacts-map/index
+        section.page__section
+            .container
+                include ../../components/contacts-feed/index
+
+
+
+
+
+
+
+
+
