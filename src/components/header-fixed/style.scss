@@ -1,29 +1,36 @@
-.header-fixed{
+.header-fixed {
   position: fixed;
   z-index: 100;
   top: -100%;
   left: 0;
   right: 0;
   padding: 12px 0;
-
   background: #5c64a4;
-
   @include tr;
 
-  &.active{
+  @include xlg-block {
+    padding: 10px 0;
+  }
+
+  &.active {
     top: 0;
   }
 
-  &__container{
+  &__container {
     align-items: center;
   }
 
-  &__center{
+  &__center {
     display: flex;
     gap: 200px;
+    @include xlg-block {
+      flex-grow: 1;
+      gap: 0;
+      justify-content: space-around;
+    }
   }
 
-  &__item{
+  &__item {
 
     @extend %contact;
     margin: 0;

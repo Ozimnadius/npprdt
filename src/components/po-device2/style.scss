@@ -1,9 +1,16 @@
 .po-device2{
   padding-top: 120px;
   padding-bottom: 285px;
+  @include xlg-block{
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
 
   &__wrap{
     margin-right: -160px;
+    @include xlg-block{
+      margin-right: 0;
+    }
   }
 
   &__content{

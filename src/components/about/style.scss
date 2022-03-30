@@ -1,8 +1,14 @@
 .about{
   padding-bottom: 50px;
+  @include xlg-block{
+    padding: 0;
+  }
 
   %ml{
     margin-left: 150px;
+    @include xlg-block{
+      margin-left: 0;
+    }
   }
 
   &__container{
@@ -10,6 +16,9 @@
     max-width: 1660px;
     padding: 0 20px;
     margin: 0 auto;
+    @include xlg-block{
+      padding: 0 70px;
+    }
 
   }
 

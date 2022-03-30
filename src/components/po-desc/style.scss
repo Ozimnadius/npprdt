@@ -1,7 +1,11 @@
-.po-desc{
+.po-desc {
   position: relative;
   padding-top: 255px;
   padding-bottom: 150px;
+  @include xlg-block {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 
   &:before {
     content: '';
@@ -12,50 +16,67 @@
     left: 0;
     width: 53%;
     background-color: $bg2;
+    @include xlg-block {
+      width: 50%;
+    }
   }
 
-  .container{
+  .container {
     position: relative;
     z-index: 2;
   }
 
-  &__title{
+  &__title {
     margin-bottom: 70px;
+    @include xlg-block {
+      margin-bottom: 30px;
+    }
   }
 
-  &__grid{
-    display:grid;
+  &__grid {
+    display: grid;
     grid-template-columns: 63fr 57fr;
     gap: 80px;
     margin-right: -40px;
+    @include xlg-block {
+      grid-template-columns: repeat(2, 1fr);
+      margin-right: 0;
+    }
   }
 
-  &__content{
+  &__content {
     color: $bg;
 
 
-    ul{
+    ul {
       line-height: 1.14;
     }
   }
 
-  &__items{
+  &__items {
     display: flex;
     flex-direction: column;
     gap: 240px;
+    @include xlg-block{
+        gap: 100px;
+    }
   }
 
-  &__item{
+  &__item {
     display: flex;
     color: $bg2;
+    @include xlg-block {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
-  &__txt{
+  &__txt {
     line-height: 1;
     width: 290px;
   }
 
-  &__val{
+  &__val {
     font-size: 123px;
     font-weight: 700;
     line-height: 1;
@@ -65,8 +86,12 @@
     gap: 45px;
     align-items: baseline;
     white-space: nowrap;
+    @include xlg-block{
+      font-size: 90px;
+      gap: 15px;
+    }
 
-    &--small{
+    &--small {
       font-size: 28px;
       font-weight: 400;
     }

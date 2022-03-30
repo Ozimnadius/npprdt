@@ -1,6 +1,10 @@
 .page-projects {
   padding-top: 115px;
   padding-bottom: 295px;
+  @include xlg-block{
+    padding-top: 40px;
+    padding-bottom: 80px;
+  }
 
   &__title {
     font-family: Manrope;
@@ -9,6 +13,9 @@
     text-transform: uppercase;
     color: $btn;
     margin-bottom: 90px;
+    @include xlg-block{
+      margin-bottom: 40px;
+    }
   }
 
   &__list {
@@ -28,25 +35,25 @@
     &:after {
       margin-top: auto;
       display: block;
-      margin-bottom: -9px;
-      margin-right: -1px;
-    }
+      width: 153px;
+      height: 153px;
+      content: '';
+      background-repeat: no-repeat;
+      background-size: auto 100%;
+      background-position: right top;
+      transform: translate(2px,2px);
 
-    &:nth-child(1) {
-      &:after {
-        content: url("/images/content/page-projects/1.png");
+      @include xlg-block{
+        width: 90px;
+        height: 90px;
       }
     }
 
-    &:nth-child(2) {
-      &:after {
-        content: url("/images/content/page-projects/2.png");
-      }
-    }
-
-    &:nth-child(3) {
-      &:after {
-        content: url("/images/content/page-projects/3.png");
+    @for $i from 1 through 3 {
+      &:nth-child(#{$i}) {
+        &:after {
+          background-image: url("/images/content/page-projects/#{$i}.png");
+        }
       }
     }
 
@@ -55,6 +62,9 @@
   &__li-title {
     margin: 25px 15px 75px;
     text-align: right;
+    @include xlg-block{
+      margin-bottom: 25px;
+    }
   }
 
   &__txt{

@@ -22,8 +22,12 @@
   left: 0;
   width: 100%;
   padding-top: 75px;
+  @include xlg-block{
+    padding-top: 20px;
+  }
 
   &--about {
+
     .header {
       &__container {
         justify-content: initial;
@@ -36,6 +40,10 @@
       &__center {
         margin-right: 200px;
         align-items: flex-start;
+        @include xlg-block{
+          margin-right: auto;
+          align-items: center;
+        }
       }
     }
   }
@@ -48,8 +56,6 @@
     }
   }
 
-
-
   &__container {
     width: 100%;
     max-width: 1660px;
@@ -59,6 +65,9 @@
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+    @include xlg-block{
+      padding: 0 70px;
+    }
   }
 
   &__left {

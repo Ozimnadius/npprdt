@@ -59,6 +59,20 @@ window.addEventListener('load', function (){
          autoplay: {
             delay: 5000,
          },
+         breakpoints: {
+            // when window width is >= 1280px
+            1280: {
+               slidesPerView: 4,
+               slidesPerGroup: 4,
+               spaceBetween: 20
+            },
+            // when window width is >= 1920px
+            1920: {
+               slidesPerView: 3,
+               slidesPerGroup: 3,
+               spaceBetween: 35,
+            }
+         }
       });
    }
 });
@@ -162,8 +176,6 @@ window.addEventListener('load', function () {
 window.addEventListener('load', function () {
 
     let form = new Call('.call');
-
-    let contactsForm = new Call('.contacts-feed__call');
 
     document.querySelectorAll('[data-call="btn"]').forEach(i => new CallBtns(i, form));
 });
@@ -272,7 +284,23 @@ window.addEventListener('load', function (){
            slidesPerView: 'auto',
            spaceBetween: 40,
            centeredSlides: true,
-           initialSlide: 1
+           initialSlide: 1,
+           breakpoints: {
+               // when window width is >= 1280px
+               1280: {
+                   slidesPerView: 'auto',
+                   spaceBetween: 20,
+                   centeredSlides: false,
+                   initialSlide: 0,
+               },
+               // when window width is >= 1920px
+               1920: {
+                   slidesPerView: 'auto',
+                   spaceBetween: 40,
+                   centeredSlides: true,
+                   initialSlide: 1,
+               }
+           }
        });
    }
 
@@ -315,9 +343,31 @@ window.addEventListener('load', function (){
             spaceBetween: 0,
             // freeMode: true,
             centeredSlides: true,
-            initialSlide: 2
+            initialSlide: 2,
+            breakpoints: {
+                // when window width is >= 1280px
+                1280: {
+                    slidesPerView: 'auto',
+                    spaceBetween: 0,
+                    centeredSlides: false,
+                    initialSlide: 0,
+                },
+                // when window width is >= 1920px
+                1920: {
+                    slidesPerView: 'auto',
+                    spaceBetween: 0,
+                    // freeMode: true,
+                    centeredSlides: true,
+                    initialSlide: 2,
+                }
+            }
         });
     }
 
+});
+window.addEventListener('load', function (){
+    if (document.querySelector('.contacts-feed__call')) {
+        let contactsForm = new Call('.contacts-feed__call');
+    }
 });
 //# sourceMappingURL=script.js.map

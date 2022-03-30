@@ -15,22 +15,22 @@
   line-height: 1;
   @include tr;
 
-  &:hover{
+  &:hover {
     box-shadow: 0px 0px 10px 10px rgba(255, 255, 255, 0.2);
   }
 
-  &--black{
+  &--black {
     box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.1);
 
-    &:hover{
+    &:hover {
       box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.2);
     }
   }
 
-  &--btn{
+  &--btn {
     box-shadow: 0px 0px 10px 10px rgba($btn, 0.2);
 
-    &:hover{
+    &:hover {
       box-shadow: 0px 0px 10px 10px rgba($btn, 0.4);
     }
   }
@@ -41,20 +41,23 @@
   overflow: hidden;
 }
 
-.title{
+.title {
   font-family: Manrope;
   font-size: 90px;
   font-weight: 900;
   color: $btn;
   line-height: 1;
   text-transform: uppercase;
+  @include xlg-block {
+    font-size: 70px;
+  }
 
-  &--under{
+  &--under {
     text-decoration: underline;
   }
 }
 
-.title-small{
+.title-small {
   color: $btn;
   font-family: Manrope;
   font-size: 28px;
@@ -62,93 +65,97 @@
   text-transform: uppercase;
 }
 
-.disabled{
+.disabled {
   filter: grayscale(1);
   pointer-events: none;
 }
 
-.fs0{
+.fs0 {
   flex-shrink: 0;
 }
 
-.grey{
+.grey {
   background: #f1f1f1;
 }
 
-.bg2{
+.bg2 {
   background-color: $bg2;
 }
-.pag{
+
+.pag {
   display: flex;
   justify-content: center;
   pointer-events: none;
   gap: 10px;
 
-  &--vertical{
+  &--vertical {
     flex-direction: column;
     align-items: flex-end;
   }
 
-  .swiper-pagination-bullet{
+  .swiper-pagination-bullet {
     width: 15px;
     height: 15px;
     background-color: #6e73b1;
     opacity: 1;
     pointer-events: all;
-    margin: 0!important;
+    margin: 0 !important;
 
 
-    &-active{
+    &-active {
       background-color: $btn;
     }
   }
 
 }
 
-.content{
+.content {
   display: flex;
   flex-direction: column;
   gap: 35px;
+  @include xlg-block {
+    gap: 25px;
+  }
 
-  &--white{
+  &--white {
     color: $bg;
   }
 
-  p{
+  p {
     text-indent: 25px;
   }
 
-  h2,h3,h4{
+  h2, h3, h4 {
     color: $btn;
     font-family: Manrope;
     font-size: 32px;
     text-transform: uppercase;
   }
 
-  ul{
+  ul {
     line-height: 1.57;
 
-    li{
-      &:before{
+    li {
+      &:before {
         content: '- ';
         display: inline;
       }
     }
   }
 
-  &--nogap{
+  &--nogap {
     gap: 0;
   }
 
-  &--ul-2{
-    ul{
+  &--ul-2 {
+    ul {
       display: flex;
       flex-direction: column;
       gap: 15px;
       line-height: 1.42;
 
-      li{
-        &:before{
+      li {
+        &:before {
           content: '';
           display: inline-block;
           width: 8px;

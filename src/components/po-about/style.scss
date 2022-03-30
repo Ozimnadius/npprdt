@@ -1,5 +1,6 @@
 .po-about{
   padding-bottom: 15px;
+
   &__title{
     margin-bottom: 40px;
   }
@@ -9,6 +10,10 @@
     display:grid;
     grid-template-columns: 1fr 580px;
     gap: 40px;
+    @include xlg-block{
+      margin-right: 0;
+      align-items: center;
+    }
   }
 
   &__content{

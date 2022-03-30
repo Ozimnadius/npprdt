@@ -2,13 +2,23 @@
   padding-top: 20px;
   padding-bottom: 120px;
   background: url("/images/content/po-composition/bg.png") right -10px bottom no-repeat;
+  @include xlg-block{
+    background: none;
+    padding-bottom: 60px;
+  }
 
   &__title{
     margin-bottom: 95px;
+    @include xlg-block{
+      margin-bottom: 20px;
+    }
   }
 
   &__content{
     max-width: 870px;
+    @include xlg-block{
+      max-width: 100%;
+    }
 
     p{
       text-indent: 20px;

@@ -1,7 +1,14 @@
 .po-system {
   padding-bottom: 145px;
+  @include xlg-block{
+    padding-bottom: 60px;
+  }
+
   &__title {
     margin-bottom: 90px;
+    @include xlg-block{
+      margin-bottom: 40px;
+    }
   }
 
   &__items{
@@ -15,5 +22,9 @@
     padding: 45px 30px;
     min-height: 565px;
     text-align: center;
+    @include xlg-block{
+      padding: 30px 20px;
+      min-height: auto;
+    }
   }
 }

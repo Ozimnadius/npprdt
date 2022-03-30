@@ -1,16 +1,22 @@
 .po-exmp{
   padding-top: 120px;
   padding-bottom: 20px;
+  @include xlg-block{
+    padding-top: 60px;
+  }
 
   &__slider{
-    margin-bottom: 0;
+    margin-bottom: 0!important;
   }
 
   &__title{
     margin-bottom: 85px;
+    @include xlg-block{
+      margin-bottom: 40px;
+    }
   }
 
   &__swiper{
-    max-width: 1060px;
+    max-width: 1060px!important;
   }
 }

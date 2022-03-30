@@ -1,9 +1,16 @@
 .po-advs {
   padding-top: 110px;
   padding-bottom: 80px;
+  @include xlg-block{
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
 
   &__title {
     margin-bottom: 75px;
+    @include xlg-block{
+      margin-bottom: 40px;
+    }
   }
 
   &__items {

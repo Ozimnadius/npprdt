@@ -1,16 +1,35 @@
 .devs{
   overflow: hidden;
   padding-bottom: 150px;
+  @include xlg-block{
+    padding-bottom: 0;
+  }
 
   &__container{
     width: 100%;
     max-width: 1360px;
     padding: 0 20px;
     margin: 0 auto;
+    @include xlg-block{
+      padding: 0 70px;
+    }
   }
 
   &__title{
     margin-bottom: 35px;
+  }
+
+  &__wrap{
+    @include xlg-block{
+      padding: 0 70px;
+    }
+  }
+
+  &__swiper{
+    @include xlg-block{
+      margin: 0 -70px;
+      padding: 0 70px;
+    }
   }
 
 }

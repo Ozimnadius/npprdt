@@ -8,6 +8,7 @@
   height: 75px;
   border-radius:50%;
   background: $btn;
+  transform: translateY(-50%);
 
   display: flex;
   align-items: center;
@@ -16,6 +17,12 @@
   opacity: 0;
   pointer-events: none;
   @include tr;
+  @include xlg-block{
+    width: 50px;
+    height: 50px;
+    right: 10px;
+    padding: 10px;
+  }
 
   &:hover{
     box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.2);

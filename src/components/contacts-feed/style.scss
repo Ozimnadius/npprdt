@@ -1,9 +1,15 @@
 .contacts-feed{
   padding-top: 220px;
   padding-bottom: 65px;
+  @include xlg-block{
+    padding: 60px 0;
+  }
 
   &__title{
     margin-bottom: 90px;
+    @include xlg-block{
+      margin-bottom: 60px;
+    }
   }
 
   &__call{
@@ -30,12 +36,18 @@
 
   &__accept{
     margin-bottom: 50px;
+    @include xlg-block{
+      margin-bottom: 40px;
+    }
   }
 
   &__captcha{
     margin-bottom: 100px;
     position: relative;
     z-index: 1;
+    @include xlg-block{
+      margin-bottom: 40px;
+    }
   }
 
   &__submit{

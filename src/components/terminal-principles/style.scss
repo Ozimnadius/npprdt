@@ -1,8 +1,14 @@
 .terminal-principles{
   padding-bottom: 110px;
+  @include xlg-block{
+    padding-bottom: 60px;
+  }
 
   &__title{
     margin-bottom: 110px;
+    @include xlg-block{
+      margin-bottom: 40px;
+    }
   }
 
   &__slider{

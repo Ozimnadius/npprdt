@@ -5,6 +5,10 @@
   display:grid;
   grid-template-columns: 560px 1fr;
   gap: 40px;
+  @include xlg-block{
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
 
   img{
     display: block;

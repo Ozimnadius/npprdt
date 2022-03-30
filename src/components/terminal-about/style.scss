@@ -4,6 +4,10 @@
     margin-right: -160px;
     display: grid;
     grid-template-columns: 1fr 610px;
+    @include xlg-block{
+      margin-right: 0;
+      grid-template-columns: 1fr 500px;
+    }
   }
 
   &__title {
@@ -26,6 +30,9 @@
   &__img {
     flex-shrink: 0;
     max-width: 290px;
+    @include xlg-block{
+      max-width: 200px;
+    }
   }
 
   &__list {

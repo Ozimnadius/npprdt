@@ -1,6 +1,10 @@
 .po-functional {
   padding-top: 110px;
   padding-bottom: 60px;
+  @include xlg-block{
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
 
   &__title{
     margin-bottom: 85px;
@@ -9,6 +13,9 @@
   &__swiper{
     padding-left: 180px;
     counter-reset: li;
+    @include xlg-block{
+      padding: 0 70px;
+    }
   }
 
   &__item {

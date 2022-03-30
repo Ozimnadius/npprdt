@@ -1,5 +1,8 @@
 .sk-about {
   padding-bottom: 45px;
+  @include xlg-block{
+    padding-bottom: 0;
+  }
 
   &__title {
     margin-bottom: 25px;
@@ -10,6 +13,9 @@
     grid-template-columns: repeat(2,1fr);
     gap: 40px;
     margin-right: -150px;
+    @include xlg-block{
+      margin-right: 0;
+    }
   }
 
   &__img{

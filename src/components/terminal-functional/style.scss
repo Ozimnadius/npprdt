@@ -1,9 +1,16 @@
 .terminal-functional{
   padding-top: 80px;
   padding-bottom: 90px;
+  @include xlg-block{
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 
   &__title{
     margin-bottom: 90px;
+    @include xlg-block{
+      margin-bottom: 40px;
+    }
   }
 
   &__list{
@@ -11,12 +18,19 @@
     display:grid;
     grid-template-columns: repeat(5,1fr);
     counter-reset: li;
+    @include xlg-block{
+      margin-right: 0;
+    }
   }
 
   &__item{
     padding: 70px 40px 0 40px;
     text-align: right;
     position: relative;
+    @include xlg-block{
+      padding-left: 0;
+      font-size: 20px;
+    }
 
     &:before{
       counter-increment: li;

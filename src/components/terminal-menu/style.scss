@@ -1,9 +1,16 @@
 .terminal-menu {
   padding-top: 70px;
   padding-bottom: 160px;
+  @include xlg-block{
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
 
   &__title {
     margin-bottom: 90px;
+    @include xlg-block{
+      margin-bottom: 40px;
+    }
   }
 
   &__slider {

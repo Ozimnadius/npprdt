@@ -1,9 +1,16 @@
 .po-pos{
   padding-top: 110px;
   padding-bottom: 175px;
+  @include xlg-block{
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
 
   &__title{
     margin-bottom: 80px;
+    @include xlg-block{
+      margin-bottom: 40px;
+    }
   }
 
   &__cols{
@@ -12,9 +19,15 @@
     gap: 40px;
     margin-bottom: 30px;
     margin-right: -160px;
+    @include xlg-block{
+      margin-right: 0;
+    }
   }
 
   &__content{
     margin-right: -160px;
+    @include xlg-block{
+      margin-right: 0;
+    }
   }
 }

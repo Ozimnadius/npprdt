@@ -2,6 +2,10 @@
   position: relative;
   padding-top: 235px;
   padding-bottom: 380px;
+  @include xlg-block{
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 
   &:before {
     content: '';
@@ -12,6 +16,9 @@
     right: 0;
     width: 47%;
     background-color: $bg2;
+    @include xlg-block{
+      width: 50%;
+    }
   }
 
   .container {
@@ -25,6 +32,9 @@
     gap: 40px;
     margin-right: -160px;
     align-items: center;
+    @include xlg-block{
+      margin-right: 0;
+    }
   }
 
   &__left {
@@ -53,6 +63,10 @@
     margin-top: 0;
     margin-bottom: 35px;
     line-height: 1;
+    @include xlg-block{
+      font-size: 90px;
+      margin-bottom: 0;
+    }
   }
 
   &__content {

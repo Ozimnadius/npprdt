@@ -1,5 +1,8 @@
 .inno-desc{
   padding-bottom: 45px;
+  @include xlg-block{
+    padding-bottom: 0;
+  }
 
   &__title{
     margin-bottom: 40px;
@@ -9,6 +12,9 @@
     display:grid;
     grid-template-columns: 1fr 410px;
     gap: 40px;
+    @include xlg-block{
+        grid-template-columns: 1fr 350px;
+    }
   }
 
   &__content{

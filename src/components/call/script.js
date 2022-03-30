@@ -2,8 +2,6 @@ window.addEventListener('load', function () {
 
     let form = new Call('.call');
 
-    let contactsForm = new Call('.contacts-feed__call');
-
     document.querySelectorAll('[data-call="btn"]').forEach(i => new CallBtns(i, form));
 });
 

@@ -4,10 +4,17 @@
   grid-template-columns: repeat(3,1fr);
   padding-top: 155px;
   padding-bottom: 80px;
+  @include xlg-block{
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
 
   &__item{
     position: relative;
     padding: 75px 55px 0 0;
+    @include xlg-block{
+      font-size: 20px;
+    }
 
     &:before{
       counter-increment: li;

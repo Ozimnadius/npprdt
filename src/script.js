@@ -10,4 +10,5 @@
 // @prepros-append components/terminal-principles/script.js
 // @prepros-append components/terminal-menu/script.js
 // @prepros-append components/po-functional/script.js
+// @prepros-append components/contacts-feed/script.js
 

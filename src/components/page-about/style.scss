@@ -2,6 +2,11 @@
   position: relative;
   padding-top: 240px;
   padding-bottom: 140px;
+  @include xlg-block{
+    padding-top: 40px;
+    padding-bottom: 80px;
+    background: $bg2;
+  }
 
   &:before {
     content: '';
@@ -13,6 +18,9 @@
     left: 0;
     width: 53%;
     background-color: #5c64a4;
+    @include xlg-block{
+      display: none;
+    }
   }
 
   .container {
@@ -22,6 +30,9 @@
 
   &__title {
     margin-bottom: 130px;
+    @include xlg-block{
+      margin-bottom: 40px;
+    }
   }
 
   &__grid {

@@ -1,25 +1,44 @@
-.po-regs{
+.po-regs {
   padding-top: 110px;
   padding-bottom: 360px;
+  @include xlg-block {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 
-  &__title{
+  &__title {
     margin-bottom: 50px;
   }
 
-  &__cols{
-    display:grid;
-    grid-template-columns: repeat(2,1fr);
+  &__cols {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 40px;
     margin-right: -140px;
+    @include xlg-block {
+      margin-right: 0;
+    }
   }
 
-  &__li{
+  &__li {
     display: flex;
     align-items: center;
     gap: 45px;
-    margin-top: -10px;
-    &:before{
-      content: url("/images/icons/pin-big.png");
+    @include xlg-block {
+      gap: 20px;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      width: 125px;
+      height: 125px;
+      background: url("/images/icons/pin-big.png") 0 0 no-repeat;
+      background-size: cover;
+      @include xlg-block {
+        width: 90px;
+        height: 90px;
+      }
     }
   }
 }

@@ -11,6 +11,9 @@
 
   @include tr;
   border-left: 113px solid $btn;
+  @include xlg-block{
+    border-width: 50px;
+  }
 
   &.active {
     left: 0;
@@ -24,10 +27,23 @@
     display: flex;
     align-items: center;
     gap: 60px;
+    @include xlg-block{
+      top: 85px;
+      right: 25px;
+    }
+  }
+
+  &__call{
+    @include xlg-block{
+      display: none;
+    }
   }
 
   &__close{
     @include tr;
+    @include xlg-block{
+      width: 30px;
+    }
 
     &:hover{
       opacity: .7;
@@ -38,6 +54,9 @@
     height: 100%;
     align-items: flex-start;
     display: flex;
+    @include xlg-block{
+        flex-direction: column;
+    }
   }
 
   &__left {
@@ -47,6 +66,10 @@
     height: 100%;
     width: 600px;
     flex-shrink: 0;
+    @include xlg-block{
+      width: 100%;
+      height: auto;
+    }
   }
 
   &__items {
@@ -55,6 +78,10 @@
     flex-direction: column;
     justify-content: space-around;
     flex-grow: 1;
+    @include xlg-block{
+        flex-direction: row;
+      padding: 20px;
+    }
   }
 
   &__item {
@@ -66,6 +93,9 @@
     font-weight: 700;
     text-transform: uppercase;
     @include tr;
+    @include xlg-block{
+      font-size: 28px;
+    }
 
     &:hover {
       color: $main;
@@ -79,6 +109,11 @@
     padding-right: 50px;
     height: 100%;
     overflow-y: auto;
+    @include xlg-block{
+      padding-top: 50px;
+      padding-right: 20px;
+      padding-bottom: 50px;
+    }
   }
 
   &__grid {
@@ -180,12 +215,32 @@
   background: url("/images/content/menu-no-line.png") 0 0 no-repeat;
   background-size: cover;
   padding-left: 20px;
-
   display: flex;
   align-items: center;
 
+  @include xlg-block{
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    background-image: none;
+    background-color: $btn;
+    border-radius: 50%;
+    left: 10px;
+    padding: 0;
+
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.1);
+    @include tr;
+  }
+
+  &:hover{
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.2);
+  }
+
   &.line{
     background-image: url("/images/content/menu.png");
+    @include xlg-block{
+      background-image: none;
+    }
   }
 
   &__wrap {
@@ -198,6 +253,9 @@
     gap: 6px;
     color: $bg;
     @include tr;
+    @include xlg-block{
+        gap: 4px;
+    }
 
     &:hover {
       color: $bg2;
@@ -208,6 +266,10 @@
       width: 43px;
       height: 4px;
       background: currentColor;
+      @include xlg-block{
+        width: 30px;
+        height: 3px;
+      }
     }
   }
 
@@ -221,6 +283,9 @@
     text-transform: uppercase;
     transform: rotate(-180deg) translateX(50%);
     white-space: nowrap;
+    @include xlg-block{
+      display: none;
+    }
   }
 
 

@@ -1,8 +1,11 @@
-.footer{
+.footer {
   padding: 110px 0;
   background-color: $bg3;
+  @include xlg-block {
+    padding: 40px 0 20px;
+  }
 
-  &__container{
+  &__container {
     width: 100%;
     max-width: 1500px;
     padding: 0 20px;
@@ -10,9 +13,12 @@
 
     display: flex;
     justify-content: space-between;
+    @include xlg-block {
+      padding: 0 70px;
+    }
   }
 
-  &__item{
+  &__item {
     display: block;
     color: $bg;
     font-weight: 900;
@@ -20,37 +26,46 @@
     line-height: 1.57;
     @include tr;
 
-    &:hover{
+    &:hover {
       color: $btn;
     }
   }
 
-  &__contacts{
+  &__contacts {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    @include xlg-block {
+      gap: 15px;
+    }
   }
 
-  &__contact{
+  &__contact {
     color: $bg;
     font-weight: 700;
     font-size: 23px;
-    @include tr;
 
     display: flex;
     gap: 25px;
     align-items: center;
-
-
-    &--big{
-      font-size: 28px;
+    @include tr;
+    @include xlg-block {
+      font-size: 20px;
     }
 
-    &--400{
+
+    &--big {
+      font-size: 28px;
+      @include xlg-block {
+        font-size: 24px;
+      }
+    }
+
+    &--400 {
       font-weight: 400;
     }
 
-    &:hover{
+    &:hover {
       color: $btn;
     }
   }
