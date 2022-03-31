@@ -5,9 +5,15 @@
     padding-top: 60px;
     padding-bottom: 60px;
   }
+  @include sm-block{
+    padding: 40px 0;
+  }
 
   &__title {
     margin-bottom: 50px;
+    @include sm-block{
+      margin-bottom: 20px;
+    }
   }
 
   &__cols {
@@ -18,6 +24,10 @@
     @include xlg-block {
       margin-right: 0;
     }
+    @include lg-block {
+      grid-template-columns: 100%;
+      gap: 0;
+    }
   }
 
   &__li {
@@ -27,6 +37,9 @@
     @include xlg-block {
       gap: 20px;
     }
+    @include sm-block{
+        gap: 0;
+    }
 
     &:before {
       content: '';
@@ -35,6 +48,7 @@
       height: 125px;
       background: url("/images/icons/pin-big.png") 0 0 no-repeat;
       background-size: cover;
+      flex-shrink: 0;
       @include xlg-block {
         width: 90px;
         height: 90px;

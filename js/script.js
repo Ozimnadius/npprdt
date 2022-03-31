@@ -49,9 +49,9 @@ window.addEventListener('load', function (){
    if (slider){
       const swiperSlider = new Swiper(slider, {
          loop: true,
-         slidesPerView: 3,
-         slidesPerGroup: 3,
-         spaceBetween: 35,
+         slidesPerView: 2,
+         slidesPerGroup: 2,
+         spaceBetween: 10,
          pagination: {
             el: '.slider__pag',
             clickable: true
@@ -60,6 +60,12 @@ window.addEventListener('load', function (){
             delay: 5000,
          },
          breakpoints: {
+            // when window width is >= 768px
+            768: {
+               slidesPerView: 2,
+               slidesPerGroup: 2,
+               spaceBetween: 20,
+            },
             // when window width is >= 1280px
             1280: {
                slidesPerView: 4,
@@ -238,12 +244,14 @@ class Call {
     open() {
         this.call.classList.add('active');
         this.active = true;
+        document.body.classList.add('ovh');
     }
 
     close = () => {
         this.call.classList.remove('active');
         this.call.classList.remove('sended');
         this.active = false;
+        document.body.classList.remove('ovh');
     }
 
     submit = (e) => {
@@ -282,12 +290,12 @@ window.addEventListener('load', function (){
    if (slider){
        const swiperSlider = new Swiper(slider, {
            slidesPerView: 'auto',
-           spaceBetween: 40,
-           centeredSlides: true,
-           initialSlide: 1,
+           spaceBetween: 10,
+           centeredSlides: false,
+           initialSlide: 0,
            breakpoints: {
-               // when window width is >= 1280px
-               1280: {
+               // when window width is >= 768px
+               768: {
                    slidesPerView: 'auto',
                    spaceBetween: 20,
                    centeredSlides: false,
@@ -342,16 +350,9 @@ window.addEventListener('load', function (){
             slidesPerView: 'auto',
             spaceBetween: 0,
             // freeMode: true,
-            centeredSlides: true,
-            initialSlide: 2,
+            centeredSlides: false,
+            initialSlide: 0,
             breakpoints: {
-                // when window width is >= 1280px
-                1280: {
-                    slidesPerView: 'auto',
-                    spaceBetween: 0,
-                    centeredSlides: false,
-                    initialSlide: 0,
-                },
                 // when window width is >= 1920px
                 1920: {
                     slidesPerView: 'auto',

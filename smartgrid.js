@@ -16,7 +16,7 @@ smartgrid('./src/default/css', {
         },
         lg: {
             width: "1279.98px",
-            fields: "70px",
+            fields: "20px",
         },
         md: {
             width: "991.98px",

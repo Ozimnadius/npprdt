@@ -3,12 +3,12 @@ window.addEventListener('load', function (){
    if (slider){
        const swiperSlider = new Swiper(slider, {
            slidesPerView: 'auto',
-           spaceBetween: 40,
-           centeredSlides: true,
-           initialSlide: 1,
+           spaceBetween: 10,
+           centeredSlides: false,
+           initialSlide: 0,
            breakpoints: {
-               // when window width is >= 1280px
-               1280: {
+               // when window width is >= 768px
+               768: {
                    slidesPerView: 'auto',
                    spaceBetween: 20,
                    centeredSlides: false,

@@ -6,6 +6,9 @@
 
   &__title{
     margin-bottom: 40px;
+    @include sm-block{
+      margin-bottom: 20px;
+    }
   }
 
   &__grid{
@@ -15,6 +18,16 @@
     @include xlg-block{
         grid-template-columns: 1fr 350px;
     }
+    @include sm-block{
+        grid-template-columns: 100%;
+      gap: 20px;
+    }
+  }
+
+  &__left{
+    @include sm-block{
+      order: 1;
+    }
   }
 
   &__content{
@@ -22,6 +35,9 @@
   }
 
   &__img{
+    @include sm-block{
+      margin: 0 -10px;
+    }
     img{
       display: block;
     }

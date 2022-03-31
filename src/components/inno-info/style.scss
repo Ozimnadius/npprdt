@@ -5,6 +5,9 @@
     padding-top: 60px;
     padding-bottom: 60px;
   }
+  @include sm-block{
+    padding: 40px 0;
+  }
 
   &__items{
     display: flex;
@@ -22,6 +25,12 @@
   &__item{
     display: flex;
     gap: 40px;
+    @include sm-block{
+        flex-direction: column;
+      gap: 10px;
+      align-items: center;
+      text-align: center;
+    }
 
     &:before{
       content: '';

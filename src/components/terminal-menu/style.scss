@@ -6,16 +6,24 @@
     padding-bottom: 60px;
   }
 
+
   &__title {
     margin-bottom: 90px;
     @include xlg-block{
       margin-bottom: 40px;
+    }
+    @include sm-block{
+      margin-bottom: 20px;
     }
   }
 
   &__slider {
     position: relative;
     margin-bottom: 45px;
+    @include sm-block{
+      margin: 0 -10px;
+      margin-bottom: 30px;
+    }
   }
 
   &__swiper {
@@ -51,10 +59,16 @@
     position: absolute;
     z-index: 10;
     top: 50%;
-    right: 60px;
+    right: 60px!important;
     left: initial !important;
     bottom: initial !important;
     transform: translateY(-50%);
+    @include lg-block{
+      right: 20px!important;
+    }
+    @include sm-block{
+      right: 10px !important;
+    }
   }
 
   &__link {

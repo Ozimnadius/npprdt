@@ -14,6 +14,14 @@
   box-shadow: 0px 0px 10px 10px rgba(255, 255, 255, 0.1);
   line-height: 1;
   @include tr;
+  @include lg-block {
+    font-size: 24px;
+    height: 40px;
+  }
+  @include sm-block {
+    font-size: 20px;
+    width: 90px;
+  }
 
   &:hover {
     box-shadow: 0px 0px 10px 10px rgba(255, 255, 255, 0.2);
@@ -51,6 +59,13 @@
   @include xlg-block {
     font-size: 70px;
   }
+  @include lg-block {
+    font-size: 50px;
+    text-align: center;
+  }
+  @include sm-block {
+    font-size: 40px;
+  }
 
   &--under {
     text-decoration: underline;
@@ -63,6 +78,12 @@
   font-size: 28px;
   font-weight: 400;
   text-transform: uppercase;
+  @include lg-block {
+    text-align: center;
+  }
+  @include sm-block{
+    font-size: 24px;
+  }
 }
 
 .disabled {
@@ -87,6 +108,9 @@
   justify-content: center;
   pointer-events: none;
   gap: 10px;
+  @include sm-block {
+    gap: 5px;
+  }
 
   &--vertical {
     flex-direction: column;
@@ -100,6 +124,10 @@
     opacity: 1;
     pointer-events: all;
     margin: 0 !important;
+    @include sm-block {
+      width: 10px;
+      height: 10px;
+    }
 
 
     &-active {
@@ -116,6 +144,10 @@
   @include xlg-block {
     gap: 25px;
   }
+  @include sm-block {
+    text-align: center;
+    gap: 15px;
+  }
 
   &--white {
     color: $bg;
@@ -123,6 +155,10 @@
 
   p {
     text-indent: 25px;
+    @include sm-block {
+      text-indent: 0;
+    }
+
   }
 
   h2, h3, h4 {
@@ -130,6 +166,9 @@
     font-family: Manrope;
     font-size: 32px;
     text-transform: uppercase;
+    @include sm-block{
+      font-size: 24px;
+    }
   }
 
   ul {

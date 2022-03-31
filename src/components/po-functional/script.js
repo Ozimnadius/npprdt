@@ -5,16 +5,9 @@ window.addEventListener('load', function (){
             slidesPerView: 'auto',
             spaceBetween: 0,
             // freeMode: true,
-            centeredSlides: true,
-            initialSlide: 2,
+            centeredSlides: false,
+            initialSlide: 0,
             breakpoints: {
-                // when window width is >= 1280px
-                1280: {
-                    slidesPerView: 'auto',
-                    spaceBetween: 0,
-                    centeredSlides: false,
-                    initialSlide: 0,
-                },
                 // when window width is >= 1920px
                 1920: {
                     slidesPerView: 'auto',

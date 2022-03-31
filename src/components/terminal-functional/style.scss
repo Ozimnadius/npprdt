@@ -1,38 +1,50 @@
-.terminal-functional{
+.terminal-functional {
   padding-top: 80px;
   padding-bottom: 90px;
-  @include xlg-block{
+  @include xlg-block {
     padding-top: 40px;
     padding-bottom: 40px;
   }
 
-  &__title{
+  &__title {
     margin-bottom: 90px;
-    @include xlg-block{
+    @include xlg-block {
       margin-bottom: 40px;
     }
   }
 
-  &__list{
+  &__list {
     margin-right: -200px;
-    display:grid;
-    grid-template-columns: repeat(5,1fr);
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     counter-reset: li;
-    @include xlg-block{
+    @include xlg-block {
       margin-right: 0;
+    }
+    @include lg-block {
+      grid-template-columns: 100%;
+      gap: 30px;
     }
   }
 
-  &__item{
+  &__item {
     padding: 70px 40px 0 40px;
     text-align: right;
     position: relative;
-    @include xlg-block{
+    @include xlg-block {
       padding-left: 0;
       font-size: 20px;
     }
+    @include lg-block {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      text-align: center;
+    }
 
-    &:before{
+    &:before {
       counter-increment: li;
       content: counter(li);
       width: 50px;
@@ -48,9 +60,13 @@
       position: absolute;
       top: 0;
       left: 0;
+      @include lg-block {
+        position: static;
+        flex-shrink: 0;
+      }
     }
 
-    &:after{
+    &:after {
       content: '';
       display: block;
       position: absolute;
@@ -59,26 +75,34 @@
       right: 0px;
       height: 2px;
       background: $btn;
-    }
-
-    &:last-child{
-      padding-left: 0;
-      &:after{
+      @include lg-block {
         display: none;
       }
     }
 
-    p{
-      &:before{
-        content: '-';
-        display: inline;
+    &:last-child {
+      padding-left: 0;
+
+      &:after {
+        display: none;
       }
     }
 
-    ul{
+    p {
+      &:before {
+        content: '-';
+        display: inline;
+        @include lg-block {
+          content: '';
+        }
+      }
+    }
+
+    ul {
       text-align: left;
-      li{
-        &:before{
+
+      li {
+        &:before {
           content: '';
           display: inline-block;
           width: 8px;

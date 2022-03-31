@@ -1,37 +1,47 @@
-.logo{
+.logo {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 5px;
   text-align: center;
+  max-width: 100%;
 
-  &--small{
+  &--small {
     flex-direction: row;
     gap: 20px;
 
-    .logo{
-      &__img{
+    .logo {
+      &__img {
         width: 77px;
       }
 
-      &__txt{
+      &__txt {
         font-size: 16px;
       }
     }
   }
 
-  &__img{
+  &__img {
     width: 113px;
+    @include lg-block {
+      width: 80px;
+    }
+    @include sm-block {
+      width: 60px;
+    }
 
-    img{
+    img {
       display: block;
     }
   }
 
-  &__txt{
+  &__txt {
     font-size: 20px;
     font-weight: 500;
     color: #37b8bf;
     line-height: 20px;
+    @include lg-block {
+      display: none;
+    }
   }
 }

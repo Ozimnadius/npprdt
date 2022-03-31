@@ -16,6 +16,17 @@
     @include xlg-block{
       margin-right: 0;
     }
+    @include lg-block{
+        grid-template-columns: 100%;
+    }
+  }
+
+  &__col{
+    &:nth-child(1) {
+      @include lg-block {
+        order: 1;
+      }
+    }
   }
 
   &__img{

@@ -4,6 +4,9 @@
   @include xlg-block {
     padding: 40px 0 20px;
   }
+  @include lg-block {
+    padding: 20px 0 10px;
+  }
 
   &__container {
     width: 100%;
@@ -15,6 +18,29 @@
     justify-content: space-between;
     @include xlg-block {
       padding: 0 70px;
+    }
+    @include lg-block {
+      padding: 0 20px;
+      align-items: center;
+    }
+    @include sm-block {
+      gap: 20px;
+      padding: 0 10px;
+    }
+  }
+
+  &__left {
+    @include lg-block {
+      display: none;
+    }
+  }
+
+  &__img {
+    @include lg-block {
+      max-width: 200px;
+    }
+    @include sm-block {
+      max-width: 150px;
     }
   }
 
@@ -52,12 +78,20 @@
     @include xlg-block {
       font-size: 20px;
     }
+    @include sm-block {
+      font-size: 14px;
+      align-items: flex-start;
+      gap: 10px;
+    }
 
 
     &--big {
       font-size: 28px;
       @include xlg-block {
         font-size: 24px;
+      }
+      @include sm-block {
+        font-size: 16px;
       }
     }
 
@@ -67,6 +101,13 @@
 
     &:hover {
       color: $btn;
+    }
+
+    img {
+      width: 30px;
+      @include sm-block {
+        transform: translateY(-5px);
+      }
     }
   }
 }

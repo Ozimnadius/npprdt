@@ -11,6 +11,9 @@
   @include xlg-block {
     padding: 10px 0;
   }
+  @include lg-block{
+    display: none;
+  }
 
   &.active {
     top: 0;

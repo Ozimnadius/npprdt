@@ -1,22 +1,30 @@
-.terminal-list{
+.terminal-list {
   counter-reset: li;
-  display:grid;
-  grid-template-columns: repeat(3,1fr);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   padding-top: 155px;
   padding-bottom: 80px;
-  @include xlg-block{
+  @include xlg-block {
     padding-top: 60px;
     padding-bottom: 40px;
   }
+  @include lg-block {
+    grid-template-columns: 100%;
+    gap: 20px;
+  }
 
-  &__item{
+  &__item {
     position: relative;
     padding: 75px 55px 0 0;
-    @include xlg-block{
+    @include xlg-block {
       font-size: 20px;
     }
+    @include lg-block{
+      padding: 0;
+      padding-left: 60px;
+    }
 
-    &:before{
+    &:before {
       counter-increment: li;
       content: counter(li);
       width: 50px;
@@ -34,7 +42,7 @@
       left: 0;
     }
 
-    &:after{
+    &:after {
       content: '';
       display: block;
       position: absolute;
@@ -43,16 +51,23 @@
       right: 0px;
       height: 2px;
       background: $btn;
-    }
-
-    &:last-child{
-      padding-left: 0;
-      &:after{
+      @include lg-block{
         display: none;
       }
     }
 
-    p{
+    &:last-child {
+      padding-left: 0;
+      @include lg-block{
+        padding-left: 60px;
+      }
+
+      &:after {
+        display: none;
+      }
+    }
+
+    p {
       text-indent: 20px;
     }
   }

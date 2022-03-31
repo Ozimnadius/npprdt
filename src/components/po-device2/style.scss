@@ -1,25 +1,38 @@
-.po-device2{
+.po-device2 {
   padding-top: 120px;
   padding-bottom: 285px;
-  @include xlg-block{
+  @include xlg-block {
     padding-top: 60px;
     padding-bottom: 40px;
   }
+  @include sm-block {
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
 
-  &__wrap{
+  &__wrap {
     margin-right: -160px;
-    @include xlg-block{
+    @include xlg-block {
       margin-right: 0;
     }
   }
 
-  &__content{
+  &__content {
     margin-bottom: 15px;
+    @include sm-block{
+      text-align: center;
+    }
   }
 
-  &__cols{
-    display:grid;
-    grid-template-columns: repeat(2,1fr);
+  &__cols {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 40px;
+    @include lg-block {
+      gap: 20px;
+    }
+    @include sm-block {
+      grid-template-columns: 100%;
+    }
   }
 }

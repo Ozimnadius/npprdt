@@ -11,8 +11,14 @@
 
   @include tr;
   border-left: 113px solid $btn;
-  @include xlg-block{
+  @include xlg-block {
     border-width: 50px;
+  }
+  @include lg-block {
+    border: none;
+  }
+  @include sm-block{
+    overflow-y: auto;
   }
 
   &.active {
@@ -27,25 +33,29 @@
     display: flex;
     align-items: center;
     gap: 60px;
-    @include xlg-block{
+    @include xlg-block {
       top: 85px;
       right: 25px;
     }
+    @include sm-block{
+      top: 20px;
+      right: 20px;
+    }
   }
 
-  &__call{
-    @include xlg-block{
+  &__call {
+    @include xlg-block {
       display: none;
     }
   }
 
-  &__close{
+  &__close {
     @include tr;
-    @include xlg-block{
+    @include xlg-block {
       width: 30px;
     }
 
-    &:hover{
+    &:hover {
       opacity: .7;
     }
   }
@@ -54,8 +64,14 @@
     height: 100%;
     align-items: flex-start;
     display: flex;
-    @include xlg-block{
-        flex-direction: column;
+    @include xlg-block {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+    }
+    @include sm-block{justify-content: flex-start;
+      padding: 40px 0;
     }
   }
 
@@ -66,9 +82,12 @@
     height: 100%;
     width: 600px;
     flex-shrink: 0;
-    @include xlg-block{
+    @include xlg-block {
       width: 100%;
       height: auto;
+    }
+    @include sm-block {
+      background: none;
     }
   }
 
@@ -78,9 +97,14 @@
     flex-direction: column;
     justify-content: space-around;
     flex-grow: 1;
-    @include xlg-block{
-        flex-direction: row;
+    @include xlg-block {
+      flex-direction: row;
       padding: 20px;
+    }
+    @include sm-block {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
     }
   }
 
@@ -93,8 +117,11 @@
     font-weight: 700;
     text-transform: uppercase;
     @include tr;
-    @include xlg-block{
+    @include xlg-block {
       font-size: 28px;
+    }
+    @include lg-block {
+      font-size: 18px;
     }
 
     &:hover {
@@ -109,47 +136,68 @@
     padding-right: 50px;
     height: 100%;
     overflow-y: auto;
-    @include xlg-block{
+    @include xlg-block {
       padding-top: 50px;
       padding-right: 20px;
       padding-bottom: 50px;
+    }
+    @include lg-block {
+      padding: 30px 0 50px;
+    }
+    @include sm-block {
+      overflow: initial;
+      width: auto;
+      height: auto;
+      padding: 0;
+      flex-grow: 0;
     }
   }
 
   &__grid {
     display: grid;
     grid-template-columns: 1fr 400px;
+    @include lg-block {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include sm-block {
+      grid-template-columns: 100%;
+    }
   }
 
-  &__sections{
+  &__sections {
     display: flex;
     flex-direction: column;
     gap: 40px;
     line-height: 1.14;
+    @include lg-block {
+      gap: 20px;
+    }
   }
 
-  &__section{
-
+  &__section {
+    @include lg-block {
+      font-size: 20px;
+    }
   }
 
-  &__section-link{
+  &__section-link {
     font-weight: 700;
     @include tr;
 
-    &:hover{
+    &:hover {
       color: $main;
     }
   }
 
-  &__links{
+  &__links {
     display: flex;
     flex-direction: column;
   }
 
-  &__link{
+  &__link {
     @include tr;
 
-    &:hover{
+    &:hover {
       color: $main;
     }
   }
@@ -159,9 +207,19 @@
     padding-right: 25px;
     padding-top: 25px;
     padding-bottom: 45px;
+    @include lg-block {
+      padding: 20px;
+    }
+    @include sm-block {
+      display: flex;
+      justify-content: center;
+    }
 
     &:first-child {
       border-right: 5px solid #212a63;
+      @include sm-block {
+        display: none;
+      }
     }
 
     &:last-child {
@@ -172,18 +230,28 @@
     }
   }
 
-  &__contacts{
+  &__logo {
+    @include sm-block {
+      display: none;
+    }
+  }
+
+  &__contacts {
     display: flex;
     flex-direction: column;
     gap: 15px;
   }
 
-  &__contact{
+  &__contact {
     display: flex;
     align-items: center;
     gap: 25px;
+    @include sm-block {
+      max-width: 250px;
+      gap: 10px;
+    }
 
-    img{
+    img {
       display: block;
     }
 
@@ -192,12 +260,18 @@
     font-family: Manrope;
     font-weight: 900;
     font-size: 23px;
-
-    &--big{
-      font-size: 28px;
+    @include sm-block {
+      font-size: 18px;
     }
 
-    &--normal{
+    &--big {
+      font-size: 28px;
+      @include sm-block {
+        font-size: 20px;
+      }
+    }
+
+    &--normal {
       font-weight: 400;
       align-items: flex-start;
     }
@@ -218,7 +292,7 @@
   display: flex;
   align-items: center;
 
-  @include xlg-block{
+  @include xlg-block {
     width: 50px;
     height: 50px;
     justify-content: center;
@@ -231,14 +305,25 @@
     box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.1);
     @include tr;
   }
-
-  &:hover{
-    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.2);
+  @include lg-block {
+    transform: none;
+    top: 20px;
+    left: 20px;
+  }
+  @include sm-block{
+    top: 10px;
+    left: 10px;
   }
 
-  &.line{
-    background-image: url("/images/content/menu.png");
+  &:hover {
     @include xlg-block{
+      box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &.line {
+    background-image: url("/images/content/menu.png");
+    @include xlg-block {
       background-image: none;
     }
   }
@@ -253,8 +338,8 @@
     gap: 6px;
     color: $bg;
     @include tr;
-    @include xlg-block{
-        gap: 4px;
+    @include xlg-block {
+      gap: 4px;
     }
 
     &:hover {
@@ -266,7 +351,7 @@
       width: 43px;
       height: 4px;
       background: currentColor;
-      @include xlg-block{
+      @include xlg-block {
         width: 30px;
         height: 3px;
       }
@@ -283,7 +368,7 @@
     text-transform: uppercase;
     transform: rotate(-180deg) translateX(50%);
     white-space: nowrap;
-    @include xlg-block{
+    @include xlg-block {
       display: none;
     }
   }

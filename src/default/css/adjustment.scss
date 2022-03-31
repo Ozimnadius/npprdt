@@ -27,8 +27,11 @@ body {
   color: $txt;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: none;
-  @include xlg-block{
+  @include xlg-block {
     font-size: 24px;
+  }
+  @include sm-block {
+    font-size: 20px;
   }
 }
 

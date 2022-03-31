@@ -1,27 +1,42 @@
 .contacts-map {
   padding-bottom: 45px;
+
   &__title {
     margin-bottom: 40px;
   }
 
   &__grid {
-    display:grid;
+    display: grid;
     grid-template-columns: 1fr auto;
     gap: 40px;
     align-items: flex-end;
+    @include lg-block {
+      grid-template-columns: 100%;
+    }
   }
 
-  &__map{
+  &__map {
     height: 445px;
+
+    iframe{
+      border: none;
+      width: 100%;
+      height: 100%;
+    }
   }
 
-  &__contacts{
+  &__contacts {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    @include lg-block {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 
-  &__contact{
+  &__contact {
     color: $bg;
     font-family: Manrope;
     font-size: 23px;
@@ -30,15 +45,15 @@
     align-items: flex-start;
     gap: 25px;
 
-    &--400{
+    &--400 {
       font-weight: 400;
     }
 
-    &--big{
+    &--big {
       font-size: 28px;
     }
 
-    img{
+    img {
       flex-shrink: 0;
       transform: translateY(-10px);
     }

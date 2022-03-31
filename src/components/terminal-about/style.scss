@@ -4,9 +4,13 @@
     margin-right: -160px;
     display: grid;
     grid-template-columns: 1fr 610px;
-    @include xlg-block{
+    @include xlg-block {
       margin-right: 0;
       grid-template-columns: 1fr 500px;
+    }
+    @include lg-block {
+      grid-template-columns: 100%;
+      gap: 30px;
     }
   }
 
@@ -25,12 +29,17 @@
   &__right {
     display: flex;
     gap: 40px;
+    @include sm-block {
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
   }
 
   &__img {
     flex-shrink: 0;
     max-width: 290px;
-    @include xlg-block{
+    @include xlg-block {
       max-width: 200px;
     }
   }
@@ -42,6 +51,10 @@
 
     font-size: 23px;
     color: $bg;
+    @include sm-block{
+      font-size: 20px;
+      gap: 10px;
+    }
   }
 
   &__li {

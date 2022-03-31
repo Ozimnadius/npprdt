@@ -1,28 +1,35 @@
 .po-system {
   padding-bottom: 145px;
-  @include xlg-block{
+  @include xlg-block {
     padding-bottom: 60px;
   }
 
   &__title {
     margin-bottom: 90px;
-    @include xlg-block{
+    @include xlg-block {
       margin-bottom: 40px;
     }
   }
 
-  &__items{
-    display:grid;
-    grid-template-columns: repeat(3,1fr);
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
+    @include lg-block {
+      grid-template-columns: 100%;
+      gap: 20px;
+    }
+    @include sm-block {
+     gap: 10px;
+    }
   }
 
-  &__item{
+  &__item {
     background-color: #e5e5e5;
     padding: 45px 30px;
     min-height: 565px;
     text-align: center;
-    @include xlg-block{
+    @include xlg-block {
       padding: 30px 20px;
       min-height: auto;
     }

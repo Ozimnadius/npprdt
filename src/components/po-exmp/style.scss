@@ -4,6 +4,9 @@
   @include xlg-block{
     padding-top: 60px;
   }
+  @include sm-block{
+    padding-top: 40px;
+  }
 
   &__slider{
     margin-bottom: 0!important;

@@ -6,6 +6,9 @@
     padding-top: 60px;
     padding-bottom: 60px;
   }
+  @include sm-block {
+    padding: 40px 0;
+  }
 
   &:before {
     content: '';
@@ -19,6 +22,9 @@
     @include xlg-block {
       width: 50%;
     }
+    @include lg-block {
+      width: 100%;
+    }
   }
 
   .container {
@@ -31,6 +37,9 @@
     @include xlg-block {
       margin-bottom: 30px;
     }
+    @include sm-block {
+      margin-bottom: 20px;
+    }
   }
 
   &__grid {
@@ -41,6 +50,10 @@
     @include xlg-block {
       grid-template-columns: repeat(2, 1fr);
       margin-right: 0;
+    }
+    @include lg-block {
+      grid-template-columns: 100%;
+      gap: 20px;
     }
   }
 
@@ -57,8 +70,19 @@
     display: flex;
     flex-direction: column;
     gap: 240px;
-    @include xlg-block{
-        gap: 100px;
+    @include xlg-block {
+      gap: 100px;
+    }
+    @include lg-block {
+      flex-direction: row;
+      justify-content: center;
+      gap: 50px;
+    }
+    @include sm-block {
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      text-align: center;
     }
   }
 
@@ -68,6 +92,13 @@
     @include xlg-block {
       flex-direction: column;
       align-items: flex-start;
+    }
+    @include lg-block {
+      color: $bg;
+    }
+    @include sm-block {
+      align-items: center;
+      gap: 10px;
     }
   }
 
@@ -86,14 +117,23 @@
     gap: 45px;
     align-items: baseline;
     white-space: nowrap;
-    @include xlg-block{
+    @include xlg-block {
       font-size: 90px;
       gap: 15px;
+    }
+    @include sm-block {
+      font-size: 50px;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
     }
 
     &--small {
       font-size: 28px;
       font-weight: 400;
+      @include sm-block {
+        font-size: 20px;
+      }
     }
   }
 }

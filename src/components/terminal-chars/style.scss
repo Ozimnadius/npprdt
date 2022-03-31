@@ -18,6 +18,9 @@
     flex-direction: column;
     gap: 25px;
     margin-bottom: 20px;
+    @include sm-block{
+        gap: 15px;
+    }
   }
 
   &__item{
@@ -40,15 +43,31 @@
   align-items: center;
   gap: 10px;
   min-height: 190px;
+  @include lg-block{
+    min-height: auto;
+    grid-template-columns: 100%;
+  }
 
   &__left{
     display:grid;
     grid-template-columns: 90px 1fr;
     gap: 50px;
     align-items: center;
+    @include lg-block{
+      display: flex;
+      justify-content: flex-start;
+      gap: 20px;
+      padding-left: 40px;
+    }
+    @include sm-block{
+      padding-left: 20px;
+    }
   }
 
   &__img{
+    @include lg-block{
+      width: 70px;
+    }
     img{
       display: block;
     }
@@ -56,11 +75,23 @@
 
   &__title{
     text-align: center;
+    @include lg-block{
+      text-align: left;
+    }
   }
 
   &__right{
     padding: 40px 60px;
     border-left: 2px solid $btn;
+    @include lg-block{
+      background-color: $btn;
+      color: $bg;
+      margin: 0 -20px;
+    }
+    @include sm-block{
+      padding: 20px 30px;
+      margin: 0 -10px;
+    }
   }
 
   &__li{

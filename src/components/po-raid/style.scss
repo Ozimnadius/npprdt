@@ -7,6 +7,10 @@
     padding-top: 40px;
     padding-bottom: 60px;
   }
+  @include sm-block{
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
 
   &__title{
     margin-bottom: 80px;
@@ -19,6 +23,12 @@
     display:grid;
     grid-template-columns: repeat(2,1fr);
     gap: 40px;
+    @include lg-block{
+        gap: 20px;
+    }
+    @include sm-block{
+        grid-template-columns: 100%;
+    }
   }
 
   &__left{

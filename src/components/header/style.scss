@@ -25,12 +25,25 @@
   @include xlg-block{
     padding-top: 20px;
   }
+  @include lg-block{
+    padding-top: 10px;
+    padding-bottom: 5px;
+    position: fixed;
+    z-index: 100;
+    background-color: $bg2;
+  }
+  @include sm-block{
+    padding-top: 5px;
+  }
 
   &--about {
 
     .header {
       &__container {
         justify-content: initial;
+        @include lg-block{
+            justify-content: flex-end;
+        }
       }
 
       &__left {
@@ -68,10 +81,31 @@
     @include xlg-block{
       padding: 0 70px;
     }
+    @include lg-block{
+      padding: 0 20px;
+      position: relative;
+      justify-content: flex-end;
+      align-items: center;
+      height: 80px;
+    }
+    @include sm-block{
+      padding: 0 10px;
+      height: 60px;
+    }
   }
 
   &__left {
     width: 113px;
+    @include lg-block{
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: auto;
+    }
+    @include sm-block{
+      top: 5px;
+    }
   }
 
   &__center {
@@ -79,11 +113,21 @@
     flex-direction: column;
     align-items: center;
     gap: 15px;
+    @include lg-block{
+      display: none;
+    }
+
   }
 
   &__right {
     width: 113px;
     padding-bottom: 25px;
+    @include lg-block{
+      padding-bottom: 0;
+    }
+    @include sm-block{
+      width: auto;
+    }
   }
 
   &__contacts {

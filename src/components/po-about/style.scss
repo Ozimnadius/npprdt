@@ -1,22 +1,32 @@
-.po-about{
+.po-about {
   padding-bottom: 15px;
 
-  &__title{
+  &__title {
     margin-bottom: 40px;
   }
 
-  &__grid{
+  &__grid {
     margin-right: -160px;
-    display:grid;
+    display: grid;
     grid-template-columns: 1fr 580px;
     gap: 40px;
-    @include xlg-block{
+    @include xlg-block {
       margin-right: 0;
       align-items: center;
     }
+    @include lg-block {
+      grid-template-columns: 100%;
+      justify-items: center;
+    }
   }
 
-  &__content{
+  &__left{
+    @include lg-block{
+      order: 1;
+    }
+  }
+
+  &__content {
     color: $bg;
 
     h2, h3, h4 {

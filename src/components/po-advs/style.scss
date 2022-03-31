@@ -17,6 +17,12 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
+    @include lg-block{
+        gap: 20px;
+    }
+    @include sm-block{
+        grid-template-columns: 100%;
+    }
   }
 }
 
@@ -25,8 +31,15 @@
   flex-direction: column;
   align-items: center;
   padding: 0 30px;
+  @include lg-block{
+    padding: 0;
+  }
 
   &__txt {
     text-indent: 20px;
+    @include lg-block{
+      text-align: center;
+      text-indent: 0;
+    }
   }
 }

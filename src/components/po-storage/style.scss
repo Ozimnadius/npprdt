@@ -6,6 +6,9 @@
     padding-top: 60px;
     padding-bottom: 60px;
   }
+  @include sm-block{
+    padding: 40px 0;
+  }
 
   &:before {
     content: '';
@@ -18,6 +21,10 @@
     background-color: $bg2;
     @include xlg-block{
       width: 50%;
+    }
+    @include lg-block{
+      width: 100%;
+      background-color: #f1f1f1;
     }
   }
 
@@ -35,11 +42,17 @@
     @include xlg-block{
       margin-right: 0;
     }
+    @include lg-block{
+        grid-template-columns: 100%;
+    }
   }
 
   &__left {
     display: flex;
     justify-content: flex-start;
+    @include lg-block{
+      order: 1;
+    }
   }
 
   &__wrap{
@@ -67,10 +80,16 @@
       font-size: 90px;
       margin-bottom: 0;
     }
+    @include sm-block{
+      font-size: 50px;
+    }
   }
 
   &__content {
     color: $bg;
+    @include lg-block{
+      color: $txt;
+    }
   }
 
 

@@ -1,27 +1,37 @@
-.inno-azimut{
+.inno-azimut {
   padding-top: 115px;
   padding-bottom: 80px;
-  @include xlg-block{
+  @include xlg-block {
     padding-top: 60px;
     padding-bottom: 60px;
   }
+  @include sm-block{
+    padding: 40px 0;
+  }
 
-  &__title{
+  &__title {
     margin: 5px;
   }
 
-  &__content{
+  &__content {
     color: $bg;
     margin-bottom: 30px;
   }
 
-  &__items{
-    display:grid;
-    grid-template-columns: repeat(3,1fr);
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
+    @include lg-block {
+      grid-template-columns: 100%;
+      gap: 20px;
+    }
+    @include sm-block{
+        gap: 10px;
+    }
   }
 
-  &__item{
+  &__item {
     border: 3px solid #828ac4;
     padding-top: 30px;
     padding-right: 25px;
@@ -32,16 +42,26 @@
     justify-content: space-between;
     align-items: flex-end;
     gap: 20px;
-    @include xlg-block{
+    @include xlg-block {
       padding: 30px 20px 0;
     }
-
-    p{
-      text-align: right;
+    @include lg-block{
+      padding: 30px 20px;
     }
 
 
-    &:after{
+    p {
+      text-align: right;
+      @include lg-block{
+        text-align: left;
+      }
+      @include sm-block{
+        text-align: center;
+      }
+    }
+
+
+    &:after {
       display: block;
       height: 90px;
       width: 90px;
@@ -51,25 +71,28 @@
       background-position: right 0;
       margin-right: -26px;
       margin-bottom: -1px;
+      @include lg-block{
+        display: none;
+      }
     }
 
-    &:nth-child(1){
+    &:nth-child(1) {
       &:after {
         background-image: url("/images/content/page-projects/1.png");
       }
     }
-    &:nth-child(2){
+
+    &:nth-child(2) {
       &:after {
         background-image: url("/images/content/page-projects/2.png");
       }
     }
-    &:nth-child(3){
+
+    &:nth-child(3) {
       &:after {
         background-image: url("/images/content/page-projects/3.png");
       }
     }
-
-
 
 
   }

@@ -9,6 +9,9 @@
     padding-top: 60px;
     padding-bottom: 60px;
   }
+  @include sm-block {
+    padding: 40px 0;
+  }
 
   &__title {
     margin-bottom: 85px;
@@ -20,22 +23,35 @@
   &__txt {
     margin-bottom: 60px;
     text-indent: 25px;
-    @include xlg-block{
+    @include xlg-block {
       margin-bottom: 40px;
+    }
+    @include sm-block{
+      text-align: center;
     }
   }
 
   &__items {
     display: grid;
+    @include sm-block{
+        gap: 40px;
+    }
     counter-reset: li;
 
     &--2 {
       grid-template-columns: repeat(2, 1fr);
       margin-right: 40px;
+      @include sm-block {
+        grid-template-columns: 100%;
+        margin-right: 0;
+      }
     }
 
     &--3 {
       grid-template-columns: repeat(3, 1fr);
+      @include sm-block {
+        grid-template-columns: 100%;
+      }
     }
   }
 
@@ -43,6 +59,9 @@
     padding-top: 70px;
     padding-right: 20px;
     position: relative;
+    @include sm-block{
+      text-align: center;
+    }
 
     &:before {
       counter-increment: li;
@@ -61,6 +80,10 @@
       position: absolute;
       top: 0;
       left: 0;
+      @include sm-block {
+        left: 50%;
+        transform: translateX(-50%);
+      }
     }
 
     &:after {
@@ -72,11 +95,18 @@
       top: 24px;
       left: 50px;
       right: 0;
+      @include sm-block {
+        left: 0;
+        top: 60px;
+      }
     }
 
     &:last-child {
       &:after {
         display: none;
+        @include sm-block{
+          display: block;
+        }
       }
     }
 

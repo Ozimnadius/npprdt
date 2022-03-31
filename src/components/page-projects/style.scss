@@ -1,9 +1,15 @@
 .page-projects {
   padding-top: 115px;
   padding-bottom: 295px;
-  @include xlg-block{
+  @include xlg-block {
     padding-top: 40px;
     padding-bottom: 80px;
+  }
+  @include lg-block {
+    padding-bottom: 60px;
+  }
+  @include sm-block{
+    padding: 30px 0;
   }
 
   &__title {
@@ -13,8 +19,13 @@
     text-transform: uppercase;
     color: $btn;
     margin-bottom: 90px;
-    @include xlg-block{
+    @include xlg-block {
       margin-bottom: 40px;
+    }
+    @include sm-block{
+      font-size: 24px;
+      text-align: center;
+      margin-bottom: 20px;
     }
   }
 
@@ -23,6 +34,13 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 35px;
     margin-bottom: 20px;
+    @include lg-block {
+      gap: 20px;
+    }
+    @include sm-block {
+      grid-template-columns: 100%;
+      gap: 10px;
+    }
   }
 
   &__li {
@@ -41,11 +59,15 @@
       background-repeat: no-repeat;
       background-size: auto 100%;
       background-position: right top;
-      transform: translate(2px,2px);
+      transform: translate(2px, 2px);
 
-      @include xlg-block{
+      @include xlg-block {
         width: 90px;
         height: 90px;
+      }
+      @include lg-block {
+        width: 70px;
+        height: 70px;
       }
     }
 
@@ -62,12 +84,20 @@
   &__li-title {
     margin: 25px 15px 75px;
     text-align: right;
-    @include xlg-block{
+    @include xlg-block {
       margin-bottom: 25px;
+    }
+    @include lg-block {
+      margin: 15px;
+      font-size: 20px;
     }
   }
 
-  &__txt{
+  &__txt {
     text-indent: 20px;
+    @include sm-block{
+      text-align: center;
+      text-indent: 0;
+    }
   }
 }

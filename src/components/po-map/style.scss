@@ -9,6 +9,10 @@
     padding-top: 60px;
     padding-bottom: 40px;
   }
+  @include lg-block{
+      grid-template-columns: 100%;
+  }
+
 
   img{
     display: block;
@@ -16,8 +20,14 @@
 
   &__content{
     color: $bg;
+    @include lg-block{
+      text-align: center;
+    }
     p{
       text-indent: 20px;
+      @include lg-block{
+          text-indent: 0;
+      }
     }
   }
 }

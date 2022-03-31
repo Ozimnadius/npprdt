@@ -4,6 +4,12 @@
   @include xlg-block{
     padding-bottom: 0;
   }
+  @include lg-block{
+    min-height: calc(100vh - 371px);
+  }
+  @include sm-block{
+    min-height: calc(100vh - 302px);
+  }
 
   &__container{
     width: 100%;
@@ -12,6 +18,12 @@
     margin: 0 auto;
     @include xlg-block{
       padding: 0 70px;
+    }
+    @include lg-block{
+      padding: 0 20px;
+    }
+    @include sm-block{
+      padding: 0 10px;
     }
   }
 
@@ -23,12 +35,26 @@
     @include xlg-block{
       padding: 0 70px;
     }
+    @include lg-block{
+      padding: 0 20px;
+    }
+    @include sm-block{
+      padding: 0 10px;
+    }
   }
 
   &__swiper{
     @include xlg-block{
       margin: 0 -70px;
       padding: 0 70px;
+    }
+    @include lg-block{
+      padding: 0 20px;
+      margin: 0 -20px;
+    }
+    @include sm-block{
+      padding: 0 10px;
+      margin: 0 -10px;
     }
   }
 
@@ -42,6 +68,12 @@
   border: 4px solid $btn;
   font-size: 23px;
   @include tr;
+  @include lg-block{
+    width: 355px;
+  }
+  @include sm-block{
+    width: 260px;
+  }
 
   &:before{
     content: '';
@@ -63,15 +95,33 @@
 
     display: flex;
     flex-direction: column;
+    @include lg-block{
+      top: 25px;
+      left: 20px;
+      right: 20px;
+      bottom: 25px;
+    }
+    @include sm-block{
+      top: 15px;
+      bottom: 15px;
+      left: 15px;
+      right: 15px;
+    }
   }
 
   &__title{
     font-weight: 700;
     margin-bottom: 20px;
+    @include sm-block{
+      font-size: 18px;
+    }
   }
 
   &__txt{
     margin-bottom: auto;
+    @include sm-block{
+      font-size: 16px;
+    }
   }
 
   &__link{
@@ -80,11 +130,18 @@
     gap: 12px;
     color: $btn;
     align-self: flex-end;
+    @include sm-block{
+      font-size: 18px;
+    }
   }
 
   &__link-img{
+
     img{
       display: block;
+      @include sm-block{
+        width: 20px;
+      }
     }
   }
 }

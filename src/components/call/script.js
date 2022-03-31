@@ -63,12 +63,14 @@ class Call {
     open() {
         this.call.classList.add('active');
         this.active = true;
+        document.body.classList.add('ovh');
     }
 
     close = () => {
         this.call.classList.remove('active');
         this.call.classList.remove('sended');
         this.active = false;
+        document.body.classList.remove('ovh');
     }
 
     submit = (e) => {

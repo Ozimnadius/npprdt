@@ -17,5 +17,15 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
+    margin-right: -160px;
+    @include xlg-block{
+      margin-right: 0;
+    }
+    @include lg-block{
+        gap: 20px;
+    }
+    @include sm-block{
+        grid-template-columns: 100%;
+    }
   }
 }

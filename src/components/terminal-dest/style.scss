@@ -1,34 +1,47 @@
-.terminal-dest{
+.terminal-dest {
   padding-top: 85px;
   padding-bottom: 80px;
-  @include xlg-block{
+  @include xlg-block {
     padding-top: 40px;
     padding-bottom: 40px;
   }
 
-  &__title{
+  &__title {
     margin-bottom: 100px;
-    @include xlg-block{
+    @include xlg-block {
       margin-bottom: 40px;
+    }
+    @include sm-block{
+      margin-bottom: 20px;
     }
   }
 
-  &__list{
-    display:grid;
-    grid-template-columns: repeat(3,1fr);
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
+    @include lg-block {
+      gap: 10px;
+    }
+    @include sm-block{
+        grid-template-columns: 100%;
+      gap: 30px;
+    }
   }
 
-  &__item{
+  &__item {
     display: flex;
     flex-direction: column;
     gap: 30px;
     align-items: center;
     text-align: center;
+    @include sm-block{
+        gap: 10px;
+    }
   }
 
-  &__img{
-    img{
+  &__img {
+    img {
       display: block;
     }
   }
