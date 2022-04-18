@@ -95,6 +95,7 @@
   }
 
   &__left {
+    position: relative;
     width: 113px;
     @include lg-block{
       position: absolute;
@@ -105,6 +106,26 @@
     }
     @include sm-block{
       top: 5px;
+    }
+  }
+
+  &__sk{
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    width: 40px;
+    height: 40px;
+    opacity: .5;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    a {
+      display: block;
+      img {
+        display: block;
+      }
     }
   }
 
@@ -176,6 +197,10 @@
       color: $btn;
       text-decoration: underline;
 
+      img{
+        opacity: 1;
+      }
+
       .header__drop {
         display: block;
       }
@@ -184,6 +209,19 @@
     &.active{
       color: $btn;
       text-decoration: underline;
+    }
+
+    &-link{
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      img{
+        display: block;
+        width: 30px;
+        height: 30px;
+        opacity: .5;
+      }
     }
   }
 

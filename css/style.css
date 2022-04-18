@@ -1356,6 +1356,7 @@ input, textarea {
   }
 }
 .header__left {
+  position: relative;
   width: 113px;
 }
 @media screen and (max-width: 1279.98px) {
@@ -1372,6 +1373,23 @@ input, textarea {
   .header__left {
     top: 5px;
   }
+}
+.header__sk {
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  width: 40px;
+  height: 40px;
+  opacity: 0.5;
+}
+.header__sk:hover {
+  opacity: 1;
+}
+.header__sk a {
+  display: block;
+}
+.header__sk a img {
+  display: block;
 }
 .header__center {
   display: -webkit-box;
@@ -1446,12 +1464,30 @@ input, textarea {
   color: #a1a5e8;
   text-decoration: underline;
 }
+.header__item:hover img {
+  opacity: 1;
+}
 .header__item:hover .header__drop {
   display: block;
 }
 .header__item.active {
   color: #a1a5e8;
   text-decoration: underline;
+}
+.header__item-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+.header__item-link img {
+  display: block;
+  width: 30px;
+  height: 30px;
+  opacity: 0.5;
 }
 .header__drop {
   position: absolute;
