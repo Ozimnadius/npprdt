@@ -116,6 +116,9 @@
     width: 40px;
     height: 40px;
     opacity: .5;
+    @include lg-block{
+      display: none;
+    }
 
     &:hover {
       opacity: 1;
@@ -186,6 +189,9 @@
     display: flex;
     gap: 40px;
     position: relative;
+    @include xlg-block{
+        gap: 20px;
+    }
   }
 
   &__item {
